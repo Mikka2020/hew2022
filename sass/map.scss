@@ -1,0 +1,27 @@
+* {
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  * {
+    /* background-color: blue; */
+    /* overflow-y: hidden; */
+  }
+}
+body {
+  margin: 0;
+}
+#container {
+  margin: 0 auto;
+  width: 90%;
+  height: 360px;
+  object-fit: contain;
+  overflow: hidden;
+  object-position: 0 100px;
+  /* border: solid 1px red; */
+  position: relative;
+  /* background-color: red; */
+}
+#map-container {
+  position: absolute;
+  /* right: 0; */
+}
