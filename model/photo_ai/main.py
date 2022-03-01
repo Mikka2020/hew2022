@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi import UploadFile, File
-import os
 import shutil
 import uvicorn
 import label_image as pd
@@ -26,8 +25,6 @@ def hello_world(name: str):
 async def file_name(name: str):
     file_name = f'tmp/{name}'
 
-    if not(os.path.isfile(file_name)):
-      return 'File Not Found'
 
     # label_image.py
     import argparse

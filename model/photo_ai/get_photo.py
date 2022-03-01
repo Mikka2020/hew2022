@@ -5,28 +5,110 @@ import pykakasi
 
 kakasi = pykakasi.kakasi()
 
-conv = kakasi.convert(text)
 WIDTH = 256
 HEIGHT = 144
 
-folder_dir = './documents/photo_ai/'
-value_name = 'オオカマキリ'
+folder_dir = './'
+# value_name = 'アカアシクワガタ'
+value_list = [
+  'カブトムシ',
+  'コカブトムシ',
+  'サイカブトムシ',
+  'アカアシクワガタ',
+  # 'オオクワガタ',
+  # 'チビクワガタ',
+  # 'ノコギリクワガタ',
+  # 'ヒラタクワガタ',
+  # 'ミヤマクワガタ',
+  # 'ゴマダラカミキリ',
+  # 'ルリボシカミキリ',
+  # 'カナブン',
+  # 'コアオハナムグリ',
+  # 'コガネムシ',
+  # 'アオオサムシ',
+  # 'ハンミョウ',
+  # 'オオゾウムシ',
+  # 'アオスジアゲハ',
+  # 'アゲハチョウ',
+  # 'オオゴマダラ',
+  # 'オオミノガ',
+  # 'カラスアゲハ',
+  # 'キアゲハ',
+  # 'クロアゲハ',
+  # 'ヤマトシジミ',
+  # 'ヨナグニサン',
+  # 'ウンモンテントウ',
+  # 'カメノコテントウ',
+  # 'キイロテントウ',
+  # 'ナナホシテントウ',
+  # 'ナミテントウ',
+  # 'クロオオアリ',
+  # 'クロクサアリ',
+  # 'ムネアカオオアリ',
+  # 'アブラゼミ',
+  # 'イワサキクサゼミ',
+  # 'エゾゼミ',
+  # 'エゾチッチゼミ',
+  # 'クマゼミ',
+  # 'ツクツクボウシ',
+  # 'ニイニイゼミ',
+  # 'ヒグラシ',
+  # 'ミンミンゼミ',
+  # 'アオモンイトトンボ',
+  # 'アキアカネ',
+  # 'オニヤンマ',
+  # 'ギンヤンマ',
+  # 'シオカラトンボ',
+  # 'チョウトンボ',
+  # 'ハッチョウトンボ',
+  # 'オオカマキリ',
+  # 'ハラビロカマキリ',
+  # 'ヒメカマキリ',
+  # 'ナナフシモドキ',
+  # 'オバボタル',
+  # 'クロマドボタル',
+  # 'ゲンジホタル',
+  # 'ヘイケボタル',
+  # 'ショウリョウバッタ',
+  # 'ツチイナゴ',
+  # 'トノサマバッタ',
+  # 'キリギリス',
+  # 'クツワムシ',
+  # 'クビキリギス',
+  # 'ヤブキリ',
+  # 'エンマコオロギ',
+  # 'ケラ',
+  # 'スズムシ',
+  # 'フタホシコオロギ',
+  # 'マツムシ',
+  # 'クサギカメムシ',
+  # 'ナナホシキンカメムシ',
+  # 'マルカメムシ',
+  # 'ナミアメンボ',
+  # 'シマアメンボ',
+  # 'アダンソンハエトリ',
+  # 'コガネグモ',
+  # 'ジョロウグモ',
+  # 'チャスジハエトリ',
+  # 'ミスジマイマイ',
+  # 'オカダンゴムシ',
+  # 'フナムシ'
+]
 
-def get_photo(folder_dir , value_name):
+
+def get_photo(folder_dir , value_list):
+  for value_name in value_list:
     conv = kakasi.convert(value_name)
     hepburn_name = conv[0]['hepburn']
     
     from icrawler.builtin import BingImageCrawler
     crawler = BingImageCrawler(storage={"root_dir": os.path.join(folder_dir , value_name)})
-    crawler.crawl(keyword=value_name , max_num=200)
+    crawler.crawl(keyword=value_name , max_num=250)
 
     dir_name = os.path.join(folder_dir , value_name)
     new_dir_name = os.path.join(folder_dir , 'resize/' , hepburn_name)
     if not os.path.exists(new_dir_name):
         os.makedirs(new_dir_name)
-        files = os.listdir(dir_name)
-    else:
-        files = os.listdir(dir_name)
 
     for file in os.listdir(dir_name):
         base, ext = os.path.splitext(file)
@@ -40,4 +122,4 @@ def get_photo(folder_dir , value_name):
             img_resize.save(os.path.join(new_dir_name, file))
 
             
-get_photo(folder_dir , value_name)
+get_photo(folder_dir , value_list)

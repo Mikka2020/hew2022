@@ -1,17 +1,14 @@
 aburazemi
 adansonhaetori
 agehachou
-agitoari
 akaashikuwagata
 akiakane
 aomon itotonbo
 aoosamushi
 aosujiageha
-chairosuzumebachi
 chasujihaetori
 chibikuwagata
 choutonbo
-cookasasuookabuto
 enmakoorogi
 ezochitchizemi
 ezozemi
@@ -24,7 +21,6 @@ hanmyou
 harabirokamakiri
 hatchoutonbo
 heikebotaru
-herakuresuookabuto
 higurashi
 himekamakiri
 hiratakuwagata
@@ -32,7 +28,6 @@ iwasakikusazemi
 jorougumo
 kabutomushi
 kamenokotentou
-kamesusi
 kanabun
 karasuageha
 kera
@@ -42,9 +37,7 @@ kirigirisu
 koaohanamuguri
 koganegumo
 koganemushi
-koganemusi
 kokabutomushi
-kookasasuookabuto
 kubikirigisu
 kumazemi
 kuroageha
@@ -58,7 +51,6 @@ matsumushi
 minminzemi
 misujimaimai
 miyamakuwagata
-monsirocyou
 muneakaooari
 namiamenbo
 namitentou
@@ -74,16 +66,13 @@ oogomadara
 ookamakiri
 ookuwagata
 oominoga
-oomurasaki
 oozoumushi
 ruriboshikamikiri
-saikabuto
-seakagokegumo
+saikabutomushi
 shimaamenbo
 shiokaratonbo
 shouryoubatta
 suzumushi
-tobiirosiwaari
 tonosamabatta
 tsuchiinago
 tsukutsukuboushi

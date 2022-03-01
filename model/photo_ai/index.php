@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
 
   // 取得結果を表示
   $result = json_decode ($response , true);
-  // var_dump($result);
+  var_dump($result);
 
   // セッションを終了
   curl_close($ch);
