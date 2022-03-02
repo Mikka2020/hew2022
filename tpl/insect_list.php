@@ -9,13 +9,11 @@
 <body>
     <table>
         <?php foreach ($insect_list as $key => $row) { ?>
-            <?php foreach ($row as $key => $value) { ?>
-                <tr>
-                    <td>
-                        <?php echo $key; ?>
-                    </td>
-                </tr>
-            <?php } ?>
+            <tr>
+                <td>
+                    <?php echo $row['insect_name']; ?>
+                </td>
+            </tr>
         <?php } ?>
     </table>
 </body>
