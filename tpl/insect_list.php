@@ -67,17 +67,27 @@
       </div>
 
     </section>
-    <table>
-      <?php foreach ($insect_list as $key => $row) { ?>
-      <?php foreach ($row as $key => $value) { ?>
-      <tr>
-        <td>
-          <?php echo $key; ?>
-        </td>
-      </tr>
+    
+    <?php // ユーザーが登録しているむしの一覧を表示 ?>
+    <?php for ($i=0; $i < count($insect_list); $i++) { ?>
+      <?php if ($i == 0) { ?>
+      <ul>
+      <li class="insect-img-container">
+          <img src="./../img/<?php echo $insect_list[$i]['insect_photo']; ?>" alt="<?php echo $data_list[$i]['insect_name'] . 'の画像'; ?>"　width="80px" height="80px">
+      </li>
+      <li class="insect-img-container">
+        <?php echo $data_list[$i]['insect_name']; ?>
+      </li>
+    </ul>
+      <?php } else { ?>
+        <ul>
+      <li class="insect-img-container">
+          <img src="./../img/<?php echo $insect_list[$i]['insect_photo']; ?>" alt="<?php echo $data_list[$i+1]['insect_name'] . 'の画像'; ?>"　width="80px" height="80px">
+      </li>
+      <li class="insect-img-container"><?php echo $data_list[$i+1]['insect_name']; ?></li>
+    </ul>
       <?php } ?>
-      <?php } ?>
-    </table>
+    <?php } ?>
   </main>
   <footer></footer>
 </body>
