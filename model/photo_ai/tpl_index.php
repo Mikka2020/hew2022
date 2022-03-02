@@ -16,5 +16,6 @@
   <?php if(!empty($result)): ?>
     <h1><?php echo round($result[0]['results'] * 100); ?>%の確率で<?php echo $result[0]['labels']; ?>やんけ！<h1>  
   <?php endif; ?>
+  <?php if(!empty($error)) var_dump($error) ?>
 </body>
 </html>
