@@ -11,7 +11,9 @@
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <div class="logo"></div>
+  </header>
   <main>
     <h1 class="none">昆虫図鑑</h1>
     <section>
