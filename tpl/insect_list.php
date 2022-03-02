@@ -12,7 +12,7 @@
             <?php foreach ($row as $key => $value) { ?>
                 <tr>
                     <td>
-                        <?php echo $value; ?>
+                        <?php echo $key; ?>
                     </td>
                 </tr>
             <?php } ?>
