@@ -1,1 +1,95 @@
-/* No CSS *//*# sourceMappingURL=insect_list.css.map */
+.none {
+  display: none;
+}
+
+* {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    height: 90px;
+    background-color: #6fb03e;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  body {
+    background-color: #fcf3b7;
+  }
+  main {
+    margin-top: 100px;
+    overflow: auto;
+    margin-bottom: 100px;
+  }
+  footer {
+    height: 80px;
+    background-color: #6fb03e;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  h2 {
+    background-color: #d82c4a;
+    color: #fff;
+    text-align: center;
+    width: 120px;
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 20px;
+    line-height: 20px;
+    font-size: 1rem;
+    margin-top: -10px;
+  }
+  img {
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  section {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 32px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: solid 1px #6b3404;
+    width: 90%;
+  }
+  section h2 {
+    margin-bottom: 24px;
+  }
+  section div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  section div ul {
+    width: 32%;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  section div ul li {
+    color: #d82c4a;
+  }
+  section div:after {
+    content: "";
+    display: block;
+    width: 32%;
+    height: 0;
+  }
+  section .insect-img-container {
+    margin-bottom: 16px;
+  }
+}
+/*# sourceMappingURL=insect_list.css.map */
