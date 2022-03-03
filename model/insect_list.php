@@ -16,12 +16,3 @@ foreach ($insect_list as $key => $value) {
     $data_list[] = $result;
 }
 $db = null; // 終了する
-
-$user_insect_list = [];
-for ($i=0; $i < count($data_list) ; $i++) {
-    $ans = $i % 2;
-    if ($ans == 0) {
-        $user_insect_list[] = $data_list[$i]['insect_name'];
-    }
-    $user_insect_list[] = $insect_list;
-}
