@@ -81,7 +81,6 @@
           <li>カブトムシ</li>
         </ul>
       </div>
-
     </section>
 
     <?php // ユーザーが登録しているむしの一覧を表示?>
@@ -111,5 +110,4 @@
   </main>
   <footer></footer>
 </body>
-
 </html>
