@@ -1,5 +1,5 @@
 <?php
-$db = new PDO('mysql:dbname=hew2022;host=localhost;charset=utf8','root','');
+$db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8',USER_ID,PASSWORD);
 $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING); // エラー表示をする為に必要
 $result = $db->query("SELECT * FROM `users`;");
 $insect_list = []; // むしの情報を格納したテーブル
