@@ -7,12 +7,15 @@
 }
 
 @media screen and (max-width: 480px) {
+  body {
+    background-color: #fcf3b7;
+  }
   header {
-    height: 90px;
+    height: 12vh;
     position: fixed;
     top: 0;
     z-index: 1;
-    width: 100%;
+    width: 100vw;
     background-size: cover;
     background-position: center;
     background-image: url("./../img/icon/header_bg.png");
@@ -21,61 +24,45 @@
   header .logo {
     background-image: url("./../img/icon/logo.png");
     z-index: 3;
-    height: 50px;
+    height: 6vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-  }
-  body {
-    background-color: #fcf3b7;
+    margin-top: 1vh;
   }
   main {
-    margin-top: 100px;
+    margin-top: 12vh;
     overflow: auto;
-    margin-bottom: 100px;
+    margin-bottom: 12vh;
   }
-  footer {
-    height: 80px;
-    background-color: #6fb03e;
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
-    width: 100%;
-  }
-  img {
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  section:nth-child(3n + 2) {
+  main section:nth-child(3n + 2) {
     color: #d82c4a;
   }
-  section:nth-child(3n + 2) h2 {
+  main section:nth-child(3n + 2) h2 {
     background-color: #d82c4a;
   }
-  section:nth-child(3n) {
+  main section:nth-child(3n) {
     color: #1c4b9c;
   }
-  section:nth-child(3n) h2 {
+  main section:nth-child(3n) h2 {
     background-color: #1c4b9c;
   }
-  section:nth-child(3n + 1) {
+  main section:nth-child(3n + 1) {
     color: #07bb2b;
   }
-  section:nth-child(3n + 1) h2 {
+  main section:nth-child(3n + 1) h2 {
     background-color: #07bb2b;
   }
-  section {
+  main section {
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 32px;
     border-radius: 5px;
     background-color: #fff;
     border: solid 1px #6b3404;
-    width: 90%;
+    width: 90vw;
   }
-  section h2 {
+  main section h2 {
     color: #fff;
     text-align: center;
     margin: 0 auto;
@@ -87,7 +74,7 @@
     line-height: 1.6rem;
     font-size: 1.2rem;
   }
-  section div {
+  main section div {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -100,25 +87,37 @@
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
-  section div ul {
+  main section div ul {
     margin-bottom: 24px;
     width: 32%;
     text-align: center;
   }
-  section div:after {
+  main section div:after {
     content: "";
     display: block;
     width: 32%;
     height: 0;
   }
-  section .insect-img-container {
+  main section .insect-img-container {
     margin-bottom: 16px;
   }
-  section .insect-img-container a {
+  main section .insect-img-container a {
     height: 100%;
   }
-  section .insect-img-container a img {
+  main section .insect-img-container a img {
     background-color: #efefef;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  footer {
+    height: 12vh;
+    background-color: #6fb03e;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    width: 100vh;
   }
 }
 /*# sourceMappingURL=insect_list.css.map */
