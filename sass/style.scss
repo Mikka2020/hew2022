@@ -1,0 +1,44 @@
+$mushi-green: #6fb03e;
+.none {
+  display: none;
+}
+* {
+  max-width: 100%;
+}
+body {
+  background-color: #fcf3b7;
+}
+@media screen and (max-width: 480px) {
+  header {
+    height: 12vh;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./../img/icon/header_bg.png");
+    background-repeat: no-repeat;
+    .logo {
+      background-image: url("./../img/icon/logo.png");
+      z-index: 3;
+      height: 6vh;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 1vh;
+    }
+  }
+  main {
+    margin-top: 12vh;
+    margin-bottom: 12vh;
+  }
+  footer {
+    height: 12vh;
+    background-color: #6fb03e;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    width: 100vh;
+  }
+}
