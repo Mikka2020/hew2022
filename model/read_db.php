@@ -2,7 +2,7 @@
 header("Content-Type: application/json");
 
 try {
-  $db = new PDO('mysql:dbname=hew2022;host=localhost;charset=utf8', 'root', '');
+  $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8',USER_ID,PASSWORD);
   if (isset($_POST['pref_id'])) {
 
     $stmt = $db->prepare("SELECT * FROM insects WHERE pref_id = :pref_id ;");
