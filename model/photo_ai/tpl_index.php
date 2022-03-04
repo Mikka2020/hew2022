@@ -16,6 +16,7 @@
   <?php if(!empty($result)): ?>
     <h1><?php echo round($result[0]['results'] * 100); ?>%の確率で<?php echo $result[0]['labels']; ?>やんけ！<h1>  
   <?php endif; ?>
+  <?php  if(!empty($exif)): ?><p>撮影日(アップロード時間)は<?php echo date("Y/m/d H:i:s" , $exif['FileDateTime']) ?></p><?php endif; ?>
   <?php if(!empty($error)) var_dump($error) ?>
 </body>
 </html>

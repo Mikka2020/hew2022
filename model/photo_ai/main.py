@@ -6,6 +6,97 @@ import label_image as pd
 
 app = FastAPI()
 
+value_list = [
+  'shimaamenbo',
+  'namiamenbo',
+  'kuroooari',
+  'kurokusaari',
+  'muneakaooari',
+  'aoosamushi',
+  'hanmyou',
+  'kabutomushi',
+  'kokabutomushi',
+  'saikabutomushi',
+  'ookamakiri',
+  'harabirokamakiri',
+  'himekamakiri',
+  'gomadarakamikiri',
+  'sirosuzikamikiri',
+  'ruriboshikamikiri',
+  'kusagikamemushi',
+  'nanahoshikinkamemushi',
+  'marukamemushi',
+  'kirigirisu',
+  'kutsuwamushi',
+  'kubikirigisu',
+  'yabukiri',
+  'akaashikuwagata',
+  'ookuwagata',
+  'chibikuwagata',
+  'nokogirikuwagata',
+  'hiratakuwagata',
+  'miyamakuwagata',
+  'enmakoorogi',
+  'kera',
+  'suzumushi',
+  'futahoshikoorogi',
+  'matsumushi',
+  'kanabun',
+  'koaohanamuguri',
+  'koganemushi',
+  'aburazemi',
+  'iwasakikusazemi',
+  'ezozemi',
+  'ezochitchizemi',
+  'kumazemi',
+  'tsukutsukuboushi',
+  'niiniizemi',
+  'higurashi',
+  'minminzemi',
+  'oozoumushi',
+  'yamatotamamushi',
+  'aosujiageha',
+  'agehachou',
+  'oogomadara',
+  'oominoga',
+  'oomurasaki',
+  'karasuageha',
+  'kiageha',
+  'kuroageha',
+  'monkicyou',
+  'monsirocyou',
+  'yamatoshijimi',
+  'yamatoshijimi',
+  'unmontentou',
+  'kamenokotentou',
+  'kiirotentou',
+  'nanahoshitentou',
+  'namitentou',
+  "aomon'itotonbo",
+  'akiakane',
+  'oniyanma',
+  'ginyanma',
+  'shiokaratonbo',
+  'choutonbo',
+  'hatchoutonbo',
+  'nanafushimodoki',
+  'kawarabatta',
+  'shouryoubatta',
+  'tsuchiinago',
+  'tonosamabatta',
+  'obabotaru',
+  'kuromadobotaru',
+  'genjihotaru',
+  'heikebotaru',
+  'adansonhaetori',
+  'koganegumo',
+  'jorougumo',
+  'chasujihaetori',
+  'misujimaimai',
+  'okadangomushi',
+  'funamushi'
+]
+
 # if __name__ == "__main__":
 #   uvicorn.run(app, port=8080, host='127.0.0.1') 
 
@@ -146,12 +237,15 @@ async def file_name(name: str):
     labels = load_labels(label_file)
     main = []
     for i in top_k:
+      index = value_list.index(labels[i])
+      index = index + 1
       main.append({
                   "labels": str(labels[i]),
+                  "index":str(index),
                   "results": str(results[i])
                   })
 
     return main
 
 if __name__ == "__main__":
-    uvicorn.run(app, port=8080, host='127.0.0.1')
+    uvicorn.run(app, port=8081, host='127.0.0.1')
