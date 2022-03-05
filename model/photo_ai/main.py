@@ -102,7 +102,7 @@ value_list = [
 
 @app.get('/index')
 def hello_world(name: str):
-    return f"unti {name}!"
+    return f"aaa {name}!"
 
 @app.get('/predict')
 # async def predict_image(file: UploadFile = File(...)):
@@ -116,14 +116,12 @@ def hello_world(name: str):
 async def file_name(name: str):
     file_name = f'tmp/{name}'
 
-
     # label_image.py
     import argparse
     from fileinput import filename
 
     import numpy as np
     import tensorflow as tf
-
 
     def load_graph(model_file):
       graph = tf.Graph()
@@ -135,7 +133,6 @@ async def file_name(name: str):
         tf.import_graph_def(graph_def)
 
       return graph
-
 
     def read_tensor_from_image_file(file_name,
                                     input_height=299,

@@ -21,9 +21,9 @@ if(isset($_POST['submit'])){
   }
   if($chk){
     $ext = strtolower(pathinfo($_FILES['upfile']['name'] , PATHINFO_EXTENSION));
-    move_uploaded_file($_FILES['upfile']['tmp_name'] , './tmp/'.$_FILES['upfile']['name']);
-    $exif = @exif_read_data('./tmp/'.$_FILES['upfile']['name']);
-    $url = "http://localhost:8081/predict?name=" . $_FILES['upfile']['name'];
+    move_uploaded_file($_FILES['upfile']['tmp_name'] , './tmp/' . date('YmdHis') . '.' . $ext);
+    $exif = @exif_read_data($_FILES['upfile']['name']);
+    $url = "http://localhost:8081/predict?name=" .  date('YmdHis') . '.' . $ext;
   
     // cURLセッションを初期化
     $ch = curl_init();
