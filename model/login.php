@@ -1,22 +1,30 @@
 <?php
 // 初期化
-$_POST['login_id'] = '';
-$_POST['password'] = '';
-$_POST['mail'] = '';
-$_POST['birth_day'] = '';
+if (empty($_POST['login_id'])) {
+  $_POST['login_id'] = '';
+}
+if (empty($_POST['password'])) {
+  $_POST['password'] = '';
+}
 /** 格納する値
  * $_POST['login_id'];
  * $_POST['password'];
- * $_POST['mail'];
- * $_POST['birth_day'];
  */
 
-// usersテーブルに値を格納し全件取得する
 $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8',USER_ID,PASSWORD);
-$db->exec("INSERT INTO 'users' ('login_id' , 'password' , ' mail' , 'birth_day') VALUES ('" . $_POST['login_id'] . "','" . $_POST['password'] . "','" . $_POST['mail'] . "','" . $_POST['birth_day'] . "')");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $result = $db->query("SELECT * FROM `users`;");
-$user_data_table = []; // userテーブルに格納されたいる全データを取得
-while($row = $result->fetch(PDO::FETCH_ASSOC)) { // データベースから1件ずつ配列を取得する
-    $user_data_table[] = $row;
+$user_list = [];
+while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    $user_list[] = $row;
 }
-$db = null; // 終了
+$db = null;
+
+for ($i=0; $i <count($user_list) ; $i++) { 
+  if ($user_list[$i]['login_id'] == $_POST['login_id']) { // ログインIDの一致
+    if ($user_list[$i]['password'] == $_POST['password']) { // パスワードの一致
+      // ログインIDとパスワード両方の一致
+      setcookie('user_id',$user_list[$i]['user_id']);
+    }
+  }
+}
