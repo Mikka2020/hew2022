@@ -1,9 +1,16 @@
-$mushi-green: #6fb03e;
+$mushi-green: #bed636;
+$mushi-brown: #6b3404;
 header,
 main,
 article,
 footer {
   width: 100%;
+}
+* {
+  font-family: "Yomogi", cursive;
+  font-weight: bold;
+  color: $mushi-brown;
+  // -webkit-text-stroke-width: 1px;
 }
 body {
   background-color: #fcf3b7;
@@ -11,24 +18,17 @@ body {
 // @media screen and (max-width: 480px) {
 // }
 header {
-  height: 12vh;
+  height: 10vh;
   position: fixed;
   top: 0;
   z-index: 1;
   width: 100vw;
-  background-size: cover;
-  background-position: center;
-  background-image: url("./../img/icon/header_bg.png");
-  background-repeat: no-repeat;
-  .logo {
-    background-image: url("./../img/icon/logo.png");
-    z-index: 3;
-    height: 6vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 1vh;
-  }
+  background-color: $mushi-green;
+  font-size: 2rem;
+  line-height: 4rem;
+  color: $mushi-brown;
+  -webkit-text-stroke-width: 2px;
+  text-align: center;
 }
 main {
   margin-top: 12vh;
@@ -37,7 +37,7 @@ main {
 footer {
   height: 12vh;
   max-height: 80px;
-  background-color: #6fb03e;
+  background-color: $mushi-green;
   position: fixed;
   bottom: 0;
   z-index: 1;
