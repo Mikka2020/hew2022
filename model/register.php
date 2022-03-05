@@ -19,7 +19,7 @@ elseif(!check_ext($_FILES['upfile']['name'])){
 }
 if($chk){
     $ext = strtolower(pathinfo($_FILES['upfile']['name'] , PATHINFO_EXTENSION));
-    move_uploaded_file($_FILES['upfile']['tmp_name'] , './photo_ai/tmp/' . $user_id . '_' . date('YmdHis') . '.' . $ext);
+    move_uploaded_file($_FILES['upfile']['tmp_name'] , './python/tmp/' . $user_id . '_' . date('YmdHis') . '.' . $ext);
     $exif = @exif_read_data($_FILES['upfile']['tmp_name']);
     $url = "http://localhost:8081/predict?name=" . $user_id . '_' . date('YmdHis') . '.' . $ext;
 
