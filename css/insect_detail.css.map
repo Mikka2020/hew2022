@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,oBAAI;AACZ,OAAO,CAAC,kBAAI",
+    "sources": [
+        "../sass/insect_detail.scss"
+    ],
+    "names": [],
+    "file": "insect_detail.css"
+}
