@@ -8,5 +8,3 @@ while($row = $result->fetch(PDO::FETCH_ASSOC)) { // データベースから1件
     $quest_data_table[] = $row;
 }
 $db = null; // 終了
-
-var_dump($quest_data_table);
