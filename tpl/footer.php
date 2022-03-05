@@ -1,6 +1,6 @@
 <ul>
   <li>
-    <a href="">
+    <a href="#">
       <p class="svg-container">
         <svg class="svg-content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path id="ホームアイコン"
@@ -12,7 +12,7 @@
     </a>
   </li>
   <li>
-    <a href="">
+    <a href="./map.php">
       <p class="svg-container">
         <svg version="1.1" id="_x32_" class="svg-content" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="opacity: 1;"
@@ -37,7 +37,7 @@
     </a>
   </li>
   <li>
-    <a href="">
+    <a href="#">
       <p class="svg-container">
         <svg class="svg-content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.123 24.805">
           <g id="出品アイコン" transform="translate(0 -56.89)">
@@ -54,7 +54,7 @@
     </a>
   </li>
   <li>
-    <a href="">
+    <a href="./insect_list.php">
       <p class="svg-container">
         <svg class="svg-content" version="1.1" id="_x31_0" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="opacity: 1;"
@@ -83,7 +83,7 @@
     </a>
   </li>
   <li>
-    <a href="">
+    <a href="#">
       <p class="svg-container">
         <svg class="svg-content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 25.989">
           <g id="マイページアイコン" transform="translate(0 -0.111)">
