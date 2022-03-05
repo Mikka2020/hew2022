@@ -25,6 +25,7 @@ for ($i=0; $i <count($user_list) ; $i++) {
     if ($user_list[$i]['password'] == $_POST['password']) { // パスワードの一致
       // ログインIDとパスワード両方の一致
       setcookie('user_id',$user_list[$i]['user_id']);
+      header('location:insect_list.php'); //ログインに成功した場合はinsect_list.phpへ遷移
     }
   }
 }
