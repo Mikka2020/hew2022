@@ -5,107 +5,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./../css/insect_list.css">
   <title>図鑑</title>
 </head>
 
 <body>
   <header>
-    <div class="logo"></div>
+    <!-- <div class="logo"></div> -->
+    <p>ずかん</p>
   </header>
   <main>
     <h1 class="none">昆虫図鑑</h1>
-    <section>
-      <h2>カブトムシ</h2>
-      <div>
-        <ul>
-          <li class="insect-img-container">
-            <a href="./insect_detail.php">
-              <img src="./../img/insects/kabutomushi.jpg" alt="カブトムシの画像" width="80px" height="80px">
-            </a>
-          </li>
-          <li class="insect-name">カブトムシ</li>
-        </ul>
-        <ul>
-          <li class="insect-img-container">
-            <a href="./insect_detail.php">
-              <img src="./../img/insects/kokabutomushi.jpeg" alt="コカブトムシの画像" width="80px" height="80px">
-            </a>
-          </li>
-          <li>コカブトムシ</li>
-        </ul>
-        <ul>
-          <li class="insect-img-container">
-            <a href="./insect_detail.php">
-              <img src="./../img/insects/saikabuto.jpg" alt="サイカブトの画像" width="80px" height="80px">
-            </a>
-          </li>
-          <li>サイカブト</li>
-        </ul>
-      </div>
-    </section>
-    <section>
-      <h2>クワガタムシ</h2>
-      <div>
-        <ul>
-          <li class="insect-img-container">
-            <a href="./insect_detail.php">
-              <img src="./../img/insects/kabutomushi.jpg" alt="カブトムシの画像" width="80px" height="80px">
-            </a>
-          </li>
-          <li>カブトムシ</li>
-        </ul>
-        <ul>
-          <li class="insect-img-container">
-            <a href="./insect_detail.php">
-              <img src="./../img/insects/kokabutomushi.jpeg" alt="コカブトムシの画像" width="80px" height="80px">
-            </a>
-          </li>
-          <li>コカブトムシ</li>
-        </ul>
-        <ul>
-          <li class="insect-img-container">
-            <a href="./insect_detail.php">
-              <img src="./../img/insects/saikabuto.jpg" alt="サイカブトの画像" width="80px" height="80px">
-            </a>
-          </li>
-          <li>サイカブト</li>
-        </ul>
-        <ul>
-          <li class="insect-img-container">
-            <a href="./insect_detail.php">
-              <img src="./../img/insects/kabutomushi.jpg" alt="カブトムシの画像" width="80px" height="80px">
-            </a>
-          </li>
-          <li>カブトムシ</li>
-        </ul>
-      </div>
-    </section>
-
-    <?php // ユーザーが登録しているむしの一覧を表示?>
-    <?php for ($i=0; $i < count($insect_list); $i++) { ?>
-    <?php if ($i == 0) { ?>
-    <ul>
-      <li class="insect-img-container">
-        <img src="./../img/<?php echo $insect_list[$i]['insect_photo']; ?>"
-          alt="<?php echo $data_list[$i]['insect_name'] . 'の画像'; ?>" width="80px" height="80px">
-      </li>
-      <li class="insect-img-container">
-        <?php echo $data_list[$i]['insect_name']; ?>
-      </li>
+    <ul class="sort-tab">
+      <li class="active">カテゴリ</li>
+      <li>ぶんるい</li>
+      <li>五十音順</li>
     </ul>
-    <?php } else { ?>
-    <ul>
-      <li class="insect-img-container">
-        <img src="./../img/<?php echo $insect_list[$i]['insect_photo']; ?>"
-          alt="<?php echo $data_list[$i+1]['insect_name'] . 'の画像'; ?>" width="80px" height="80px">
-      </li>
-      <li class="insect-img-container">
-        <?php echo $data_list[$i+1]['insect_name']; ?>
-      </li>
-    </ul>
-    <?php } ?>
-    <?php } ?>
+    <!-- <div class="content-top-bg"></div> -->
+    <div id="category-container">
+      <?php foreach ($insect_list as $key => $insect_categories): ?>
+      <section>
+        <h2>
+          <?php echo $key; ?>
+        </h2>
+        <div>
+          <?php foreach ($insect_categories as $insect): ?>
+          <ul>
+            <li class="insect-img-container">
+              <a href="./insect_detail.php">
+                <img src="./../img/icon/no-data-icon.png" alt="カブトムシの画像" width="80px" height="80px">
+              </a>
+            </li>
+            <li class="insect-name">
+              <?php echo $insect['insect_name']; ?>
+            </li>
+          </ul>
+          <?php endforeach; ?>
+        </div>
+      </section>
+      <?php endforeach; ?>
+    </div>
   </main>
   <footer>
     <?php require_once 'footer.php'; ?>

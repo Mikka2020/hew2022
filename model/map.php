@@ -1,6 +1,4 @@
 <?php
-// header("Content-Type: application/json");
-
 try {
     $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID, PASSWORD);
     if (isset($_COOKIE['user_id'])) {
@@ -22,5 +20,4 @@ try {
     echo $e->getMessage();
 } finally {
     $db = null;
-    exit;
 }

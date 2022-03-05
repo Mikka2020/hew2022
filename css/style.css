@@ -5,30 +5,28 @@ footer {
   width: 100%;
 }
 
+* {
+  font-family: "Yomogi", cursive;
+  font-weight: bold;
+  color: #6b3404;
+}
+
 body {
   background-color: #fcf3b7;
 }
 
 header {
-  height: 12vh;
+  height: 10vh;
   position: fixed;
   top: 0;
   z-index: 1;
   width: 100vw;
-  background-size: cover;
-  background-position: center;
-  background-image: url("./../img/icon/header_bg.png");
-  background-repeat: no-repeat;
-}
-
-header .logo {
-  background-image: url("./../img/icon/logo.png");
-  z-index: 3;
-  height: 6vh;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 1vh;
+  background-color: #bed636;
+  font-size: 2rem;
+  line-height: 10vh;
+  color: #6b3404;
+  -webkit-text-stroke-width: 2px;
+  text-align: center;
 }
 
 main {
@@ -39,7 +37,7 @@ main {
 footer {
   height: 12vh;
   max-height: 80px;
-  background-color: #6fb03e;
+  background-color: #bed636;
   position: fixed;
   bottom: 0;
   z-index: 1;
