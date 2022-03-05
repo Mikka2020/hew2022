@@ -17,9 +17,7 @@
     <form action="" method="post">
       <input type="text" name="login_id">
       <input type="password" name="password">
-      <input type="email" name="mail">
-      <input type="datetime" name="birth_day">
-      <button type="submit">登録</button>
+      <button type="submit" name="btn">ログイン</button>
     </form>
   </main>
   <footer>
