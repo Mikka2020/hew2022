@@ -21,44 +21,44 @@ $(function () {
       const clickedRegionId = e.target.getAttribute("data-region");
       console.log(clickedRegionId);
       // スマホとパソコンで表示処理を切り替え
-      if (screen.width < 480) {
-        // スマホサイズのとき
-        myMapContainer.style.height = "780px";
-        myMapContainer.style.width = "200%";
+      // if (screen.width < 480) {
+      // }
+      // スマホサイズのとき
+      myMapContainer.style.height = "180vw";
+      myMapContainer.style.width = "180vw";
 
-        // 選択した地方が画面の中央になるように位置を変更
-        function locateRegionCenter(clickedRegionId) {
-          if (clickedRegionId == 1) {
-            // myMapContainer.css({ top: "10%", right: "20%" });
-            myMapContainer.style.top = "10%";
-            myMapContainer.style.right = "20%";
-          } else if (clickedRegionId == 2) {
-            myMapContainer.style.top = "-40%";
-            myMapContainer.style.right = "18%";
-          } else if (clickedRegionId == 3) {
-            myMapContainer.style.bottom = "-20%";
-            myMapContainer.style.right = "12%";
-          } else if (clickedRegionId == 4) {
-            myMapContainer.style.bottom = "-30%";
-            myMapContainer.style.right = "-15%";
-          } else if (clickedRegionId == 5) {
-            myMapContainer.style.bottom = "-20%";
-            myMapContainer.style.right = "-50%";
-          } else if (clickedRegionId == 6) {
-            myMapContainer.style.bottom = "-30%";
-            myMapContainer.style.left = "-20%";
-          } else if (clickedRegionId == 7) {
-            myMapContainer.style.bottom = "0%";
-            myMapContainer.style.left = "-20%";
-          } else if (clickedRegionId == 8) {
-            myMapContainer.style.bottom = "-8%";
-            myMapContainer.style.left = "18%";
-          } else {
-            // パソコンサイズの表示処理
-          }
+      // 選択した地方が画面の中央になるように位置を変更
+      function locateRegionCenter(clickedRegionId) {
+        if (clickedRegionId == 1) {
+          // myMapContainer.css({ top: "10%", right: "20%" });
+          myMapContainer.style.top = "10%";
+          myMapContainer.style.right = "20%";
+        } else if (clickedRegionId == 2) {
+          myMapContainer.style.top = "-40%";
+          myMapContainer.style.right = "18%";
+        } else if (clickedRegionId == 3) {
+          myMapContainer.style.bottom = "-20%";
+          myMapContainer.style.right = "12%";
+        } else if (clickedRegionId == 4) {
+          myMapContainer.style.bottom = "-30%";
+          myMapContainer.style.right = "-15%";
+        } else if (clickedRegionId == 5) {
+          myMapContainer.style.bottom = "-20%";
+          myMapContainer.style.right = "-50%";
+        } else if (clickedRegionId == 6) {
+          myMapContainer.style.bottom = "-30%";
+          myMapContainer.style.left = "-20%";
+        } else if (clickedRegionId == 7) {
+          myMapContainer.style.bottom = "0%";
+          myMapContainer.style.left = "-20%";
+        } else if (clickedRegionId == 8) {
+          myMapContainer.style.bottom = "-8%";
+          myMapContainer.style.left = "18%";
+        } else {
+          // パソコンサイズの表示処理
         }
-        locateRegionCenter(clickedRegionId);
       }
+      locateRegionCenter(clickedRegionId);
       // 選択した都道府県が地方に含まれているか
       function isClickedRegion(i) {
         return (
