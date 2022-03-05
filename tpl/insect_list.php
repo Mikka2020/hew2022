@@ -20,7 +20,7 @@
       <div>
         <ul>
           <li class="insect-img-container">
-            <a href="">
+            <a href="./insect_detail.php">
               <img src="./../img/insects/kabutomushi.jpg" alt="カブトムシの画像" width="80px" height="80px">
             </a>
           </li>
@@ -28,7 +28,7 @@
         </ul>
         <ul>
           <li class="insect-img-container">
-            <a href="">
+            <a href="./insect_detail.php">
               <img src="./../img/insects/kokabutomushi.jpeg" alt="コカブトムシの画像" width="80px" height="80px">
             </a>
           </li>
@@ -36,7 +36,7 @@
         </ul>
         <ul>
           <li class="insect-img-container">
-            <a href="">
+            <a href="./insect_detail.php">
               <img src="./../img/insects/saikabuto.jpg" alt="サイカブトの画像" width="80px" height="80px">
             </a>
           </li>
@@ -49,7 +49,7 @@
       <div>
         <ul>
           <li class="insect-img-container">
-            <a href="">
+            <a href="./insect_detail.php">
               <img src="./../img/insects/kabutomushi.jpg" alt="カブトムシの画像" width="80px" height="80px">
             </a>
           </li>
@@ -57,7 +57,7 @@
         </ul>
         <ul>
           <li class="insect-img-container">
-            <a href="">
+            <a href="./insect_detail.php">
               <img src="./../img/insects/kokabutomushi.jpeg" alt="コカブトムシの画像" width="80px" height="80px">
             </a>
           </li>
@@ -65,7 +65,7 @@
         </ul>
         <ul>
           <li class="insect-img-container">
-            <a href="">
+            <a href="./insect_detail.php">
               <img src="./../img/insects/saikabuto.jpg" alt="サイカブトの画像" width="80px" height="80px">
             </a>
           </li>
@@ -73,7 +73,7 @@
         </ul>
         <ul>
           <li class="insect-img-container">
-            <a href="">
+            <a href="./insect_detail.php">
               <img src="./../img/insects/kabutomushi.jpg" alt="カブトムシの画像" width="80px" height="80px">
             </a>
           </li>
@@ -107,7 +107,9 @@
     <?php } ?>
     <?php } ?>
   </main>
-  <footer></footer>
+  <footer>
+    <?php require_once 'footer.php'; ?>
+  </footer>
 </body>
 
 </html>
