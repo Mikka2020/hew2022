@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("./destyle.css");
 @import url("./style.css");
 body {
@@ -14,11 +15,15 @@ body {
 #map-container {
   position: relative;
   background-color: #fff;
+  background-image: url("./../img/icon/japan.png");
+  background-position-y: 80px;
+  background-size: 100%;
+  background-repeat: no-repeat;
   border: solid 2px #6b3404;
   border-radius: 10px;
   margin: 0 auto;
   width: 90vw;
-  height: 70vh;
+  height: 120vw;
 }
 
 #map-container .ratio-container {
@@ -36,14 +41,23 @@ body {
 
 #map-container .progressbar-container {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   border: solid 1px #6b3404;
   border-radius: 50%;
 }
 
 #map-container .progressbar-container div {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #map-container #hokkaidoProgressbar {
@@ -52,8 +66,7 @@ body {
 }
 
 #map-container #hokkaidoProgressbar div {
-  top: 16px;
-  left: 3px;
+  background-image: url("./../img/icon/map/北海道ボタン中央部.svg");
 }
 
 #map-container #tohokuProgressbar {
@@ -62,8 +75,7 @@ body {
 }
 
 #map-container #tohokuProgressbar div {
-  top: 16px;
-  left: 3px;
+  background-image: url("./../img/icon/map/東北ボタン中央部.svg");
 }
 
 #map-container #kantoProgressbar {
@@ -72,8 +84,7 @@ body {
 }
 
 #map-container #kantoProgressbar div {
-  top: 16px;
-  left: 3px;
+  background-image: url("./../img/icon/map/関東ボタン中央部.svg");
 }
 
 #map-container #chubuProgressbar {
@@ -82,8 +93,7 @@ body {
 }
 
 #map-container #chubuProgressbar div {
-  top: 16px;
-  left: 3px;
+  background-image: url("./../img/icon/map/中部ボタン中央部.svg");
 }
 
 #map-container #kinkiProgressbar {
@@ -92,8 +102,7 @@ body {
 }
 
 #map-container #kinkiProgressbar div {
-  top: 16px;
-  left: 3px;
+  background-image: url("./../img/icon/map/近畿ボタン中央部.svg");
 }
 
 #map-container #chugokuProgressbar {
@@ -102,8 +111,7 @@ body {
 }
 
 #map-container #chugokuProgressbar div {
-  top: 16px;
-  left: 3px;
+  background-image: url("./../img/icon/map/中国ボタン中央部.svg");
 }
 
 #map-container #shikokuProgressbar {
@@ -112,8 +120,7 @@ body {
 }
 
 #map-container #shikokuProgressbar div {
-  top: 16px;
-  left: 3px;
+  background-image: url("./../img/icon/map/四国ボタン中央部.svg");
 }
 
 #map-container #kyushuProgressbar {
@@ -122,7 +129,42 @@ body {
 }
 
 #map-container #kyushuProgressbar div {
-  top: 16px;
-  left: 3px;
+  background-image: url("./../img/icon/map/九州・沖縄ボタン中央部.svg");
+}
+
+#modal-container .modal-content {
+  position: absolute;
+  background-color: #fff;
+  width: 80vw;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  z-index: 12;
+}
+
+#modal-container .modal-content ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#modal-container .modal-content ul img {
+  border-radius: 50%;
+}
+
+#modal-container .hokkaido-modal-container {
+  display: none;
+}
+
+.modal-bg {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 0;
 }
 /*# sourceMappingURL=map.css.map */
