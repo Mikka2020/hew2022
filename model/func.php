@@ -14,7 +14,7 @@ function all_insect_check($user_id) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $check_data[] = $row['insect_id'];
     }
-    for ($i=0; $i < 88; $i++) { // 現在inssectsテーブルに入っている全件(88)の配列にfalseを格納
+    for ($i=0; $i < 88; $i++) { // 現在insectsテーブルに入っている全件(88)の配列にfalseを格納
         $all_check[$i] = false;
     }
     foreach ($check_data as $row) { // 登録されているinsect_id番目のfalseをtrueに書き換える
