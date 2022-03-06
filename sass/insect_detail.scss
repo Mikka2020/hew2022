@@ -8,10 +8,16 @@ $mushi-brown: #6b3404;
   height: 40vh;
   margin: 0 auto;
   border: 1px solid $mushi-brown;
+  background-color: #efefef;
   img {
     width: 100%;
     height: 100%;
+  }
+  .insect-img {
     object-fit: cover;
+  }
+  .no-insect-img {
+    object-fit: contain;
   }
   margin-bottom: 1rem;
 }
@@ -30,7 +36,7 @@ $mushi-brown: #6b3404;
     -webkit-text-stroke: 1px;
     color: #fff;
   }
-  .active {
+  .active-tab {
     background-color: #fff;
     color: $mushi-brown;
     border-bottom: 0;
@@ -56,5 +62,13 @@ section {
     div {
       width: 70%;
     }
+  }
+}
+.inactive-content {
+  display: none;
+}
+#content-2 {
+  p {
+    line-height: 1.5em;
   }
 }

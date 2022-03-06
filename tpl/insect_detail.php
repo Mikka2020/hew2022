@@ -22,14 +22,17 @@
   </header>
   <main>
     <div class="insect-img-container">
-      <img src="./../img/insects/kabutomushi.jpg" alt="カブトムシの画像">
+      <img
+        class="<?php echo insect_check($_COOKIE['user_id'], $_GET['id'])? "insect-img" : "no-insect-img"; ?>"
+        src="<?php echo insect_check($_COOKIE['user_id'], $_GET['id'])? "./../img/insects/kabutomushi.jpg" : "./../img/icon/no-data-detail.svg"; ?>"
+        alt="<?php echo $insect_data['insect_name']; ?>の画像">
     </div>
     <ul class="contents-tabs">
-      <li class="active">がいよう</li>
-      <li>せつめい</li>
-      <li>まめちしき</li>
+      <li id="tab-1" class="active-tab">がいよう</li>
+      <li id="tab-2">せつめい</li>
+      <li id="tab-3">まめちしき</li>
     </ul>
-    <section>
+    <section id="content-1" class="active-content">
       <dl>
         <div class="data-1">
           <dt>なまえ</dt>
@@ -77,11 +80,19 @@
         </div>
       </dl>
     </section>
-
+    <section id="content-2" class="inactive-content">
+      <p>
+        <?php echo $insect_data['insect_text']; ?>
+      </p>
+    </section>
+    <section id="content-3" class="inactive-content">
+      <?php echo $insect_data['insect_trivia']; ?>
+    </section>
   </main>
   <footer>
     <?php require_once 'footer.php'; ?>
   </footer>
+  <script src="./../js/insect_detail.js"></script>
 </body>
 
 </html>
