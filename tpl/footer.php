@@ -18,9 +18,9 @@
           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="opacity: 1;"
           xml:space="preserve">
           <style type="text/css">
-          .st0 {
-            fill: #ffffff;
-          }
+            .st0 {
+              fill: #ffffff;
+            }
           </style>
           <g>
             <path class="st0"
@@ -41,7 +41,7 @@
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="./insect_register.php">
       <p class="svg-container">
         <svg class="svg-content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.123 24.805">
           <g id="出品アイコン" transform="translate(0 -56.89)">
