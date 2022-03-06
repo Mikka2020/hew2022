@@ -11,7 +11,14 @@
 
 <body>
   <header>
-    <p>カブトムシ</p>
+    <p class="back-icon">
+      <a href="#" onClick="history.back(); return false;">
+        <img src="../img/icon/戻るアイコン.svg" alt="" width="24px" height="">
+      </a>
+    </p>
+    <p>
+      <?php echo $insect_data['insect_name']; ?>
+    </p>
   </header>
   <main>
     <div class="insect-img-container">
@@ -23,28 +30,33 @@
       <li>まめちしき</li>
     </ul>
     <section>
-      <?php foreach ($insect_data as $row) : ?>
       <dl>
+        <div class="data-1">
+          <dt>なまえ</dt>
+          <dd>
+            <?php echo $insect_data['insect_name']; ?>
+          </dd>
+        </div>
         <div class="data-1">
           <dt>がくめい</dt>
           <dd>
-            <?php echo $row['insect_scientific_name']; ?>
+            <?php echo $insect_data['insect_scientific_name']; ?>
           </dd>
         </div>
         <div class="data-1">
           <dt>ぶんるい</dt>
           <div>
             <dd>
-              <?php echo $row['insect_moku']; ?>目
+              <?php echo $insect_data['insect_moku']; ?>目
             </dd>
             <dd>
-              <?php echo $row['insect_amoku']; ?>亜目
+              <?php echo $insect_data['insect_amoku']; ?>亜目
             </dd>
             <dd>
-              <?php echo $row['insect_ka']; ?>科
+              <?php echo $insect_data['insect_ka']; ?>科
             </dd>
             <dd>
-              <?php echo $row['insect_aka']; ?>亜科
+              <?php echo $insect_data['insect_aka']; ?>亜科
             </dd>
           </div>
         </div>
@@ -52,7 +64,7 @@
           <dt>レア度</dt>
           <dd>
             <?php
-              for ($i=0; $i < $row['rarity'] ; $i++) {
+              for ($i=0; $i < $insect_data['rarity'] ; $i++) {
                   echo ' ★ ';
               }
             ?>
@@ -64,7 +76,6 @@
           </dd>
         </div>
       </dl>
-      <?php endforeach; ?>
     </section>
 
   </main>

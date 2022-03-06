@@ -7,13 +7,10 @@ $stmt = $db->prepare("SELECT * FROM `insects` WHERE insect_id = :id"); // ゲッ
 $stmt->bindParam(':id', $insect_id, PDO::PARAM_INT);
 $insect_id = $_GET['id'];
 $stmt->execute();
-$insect_data = []; // むしの情報を格納したテーブル
+$insect_data = ""; // むしの情報を格納
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { // データベースから1件ずつ配列を取得する
-    $insect_data[] = $row;
+    $insect_data = $row;
 }
 $db = null;
 
-foreach ($insect_data as $key => $value) {
-    # code...
-    $rea = 3 - $value['rarity'];
-}
+$rea = 3 - $insect_data['rarity'];
