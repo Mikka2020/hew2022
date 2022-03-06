@@ -35,7 +35,7 @@ function insect_check($user_id,$insect_id) {
     $stmt = $db->prepare("SELECT * FROM registers INNER JOIN insects ON registers.insect_id = insects.insect_id AND registers.user_id = $user_id ORDER BY insects.insect_id ASC;");
     $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
     $stmt->execute();
-    $check_data = []; // ユーザーが登録してあるむしのデータを格納
+    $check_data = [];
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { // 引数1で指定したユーザーIDが登録しているむしのIDを全て配列に格納
         $check_data[] = $row['insect_id'];
     }
