@@ -11,6 +11,7 @@ main {
     width: 90vw;
     margin: 0 auto;
     justify-content: space-between;
+    margin-top: 5%;
     li {
       border: solid 2px $mushi-brown;
       border-radius: 15px 15px 0 0;
@@ -44,7 +45,7 @@ main {
     border-radius: 0 0 15px 15px;
     border: solid 2px $mushi-brown;
     border-top: 0;
-    height: 70vh;
+    height: 85%;
     overflow: auto;
     section {
       padding-top: 30px;

@@ -11,6 +11,7 @@ main .sort-tab {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 5%;
 }
 
 main .sort-tab li {
@@ -38,7 +39,7 @@ main #category-container {
   border-radius: 0 0 15px 15px;
   border: solid 2px #6b3404;
   border-top: 0;
-  height: 70vh;
+  height: 85%;
   overflow: auto;
 }
 
