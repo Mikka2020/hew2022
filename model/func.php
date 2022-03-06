@@ -14,10 +14,10 @@ function all_insect_check($user_id) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $check_data[] = $row['insect_id'];
     }
-    for ($i=0; $i < 88; $i++) { 
+    for ($i=0; $i < 88; $i++) { // 現在inssectsテーブルに入っている全件(88)の配列にfalseを格納
         $all_check[$i] = 'false';
     }
-    foreach ($check_data as $row) {
+    foreach ($check_data as $row) { // 登録されているinsect_id番目のfalseをtrueに書き換える
         $all_check[$row] = 'true';
     }
     return $all_check;
@@ -36,11 +36,11 @@ function insect_check($user_id,$insect_id) {
     $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
     $stmt->execute();
     $check_data = []; // ユーザーが登録してあるむしのデータを格納
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { // 引数1で指定したユーザーIDが登録しているむしのIDを全て配列に格納
         $check_data[] = $row['insect_id'];
     }
     foreach ($check_data as $row) {
-        if($row == $insect_id) {
+        if($row == $insect_id) { // 引数2で指定したむしのIDとユーザーが登録しているむしのIDが一致した時trueを返す、一度も一致しなかった場合はfalseを返す
             $ans = 'ture';
             return $ans;
         } else {
