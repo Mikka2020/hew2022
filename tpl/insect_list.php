@@ -35,8 +35,10 @@
           <?php foreach ($insect_categories as $insect): ?>
           <ul>
             <li class="insect-img-container">
-              <a href="./insect_detail.php">
-                <img src="./../img/icon/no-data-icon.png" alt="カブトムシの画像" width="80px" height="80px">
+              <a href="./insect_detail.php?id=<?php echo $insect['insects_insect_id']; ?>">
+                <img
+                  src="<?php echo all_insect_check($_COOKIE['user_id'])[$insect['insects_insect_id']]? './../img/insects/kabutomushi.jpg' : './../img/icon/no-data-icon.png'; ?>"
+                  alt="カブトムシの画像" width="80px" height="80px">
               </a>
             </li>
             <li class="insect-name">
