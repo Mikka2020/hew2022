@@ -2,3 +2,4 @@
 *.DS_Store
 /users
 /model/photo_ai/tmp
+test.*
