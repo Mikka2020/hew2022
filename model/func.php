@@ -93,6 +93,5 @@ function user_rank($user_id) {
     } else if (125 <= $sum_exp) { // 125以上の場合はレベル10
         $user_rank = 10;
     }
-
     return $user_rank;
 }
