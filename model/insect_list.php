@@ -52,23 +52,23 @@ foreach ($quest_exp as $row) {
 }
 
 if (0 <= $sum_exp && $sum_exp < 3) { // 0以上3以下の場合はレベル1
-    $user_level = 1;
+    $user_rank = 1;
 } else if (3 <= $sum_exp && $sum_exp < 10) { // 3以上10以下の場合はレベル2
-    $user_level = 2;
+    $user_rank = 2;
 } else if (10 <= $sum_exp && $sum_exp < 18) { // 10以上18未満の場合はレベル3
-    $user_level = 3;
+    $user_rank = 3;
 } else if (18 <= $sum_exp && $sum_exp < 26) { // 18以上26未満の場合はレベル4
-    $user_level = 4;
+    $user_rank = 4;
 } else if (26 <= $sum_exp && $sum_exp < 42) { // 26以上42未満の場合はレベル5
-    $user_level = 5;
+    $user_rank = 5;
 } else if (42 <= $sum_exp && $sum_exp < 57) { // 42以上57未満の場合はレベル6
-    $user_level = 6;
+    $user_rank = 6;
 } else if (57 <= $sum_exp && $sum_exp < 77) { // 57以上77未満の場合はレベル7
-    $user_level = 7;
+    $user_rank = 7;
 } else if (77 <= $sum_exp && $sum_exp < 100) { // 77以上100未満の場合はレベル8
-    $user_level = 8;
+    $user_rank = 8;
 } else if (100 <= $sum_exp && $sum_exp < 125) { // 100以上125未満の場合はレベル9
-    $user_level = 9;
+    $user_rank = 9;
 } else if (125 <= $sum_exp) { // 125以上の場合はレベル10
-    $user_level = 10;
+    $user_rank = 10;
 }
