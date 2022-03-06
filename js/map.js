@@ -1,8 +1,8 @@
 // progressbar.js@1.0.0 version is used
 // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
-var hokkaido = new ProgressBar.Circle(hokkaidoProgressbar, {
-  strokeWidth: 6,
+var hokkaidoPro = new ProgressBar.Circle(hokkaidoProgressbar, {
+  strokeWidth: 10,
   easing: "easeInOut",
   duration: 1400,
   color: "#F5C421",
@@ -10,8 +10,8 @@ var hokkaido = new ProgressBar.Circle(hokkaidoProgressbar, {
   trailWidth: 1,
   svgStyle: null,
 });
-var tohoku = new ProgressBar.Circle(tohokuProgressbar, {
-  strokeWidth: 6,
+var tohokuPro = new ProgressBar.Circle(tohokuProgressbar, {
+  strokeWidth: 10,
   easing: "easeInOut",
   duration: 1400,
   color: "#F5C421",
@@ -19,8 +19,8 @@ var tohoku = new ProgressBar.Circle(tohokuProgressbar, {
   trailWidth: 1,
   svgStyle: null,
 });
-var kanto = new ProgressBar.Circle(kantoProgressbar, {
-  strokeWidth: 6,
+var kantoPro = new ProgressBar.Circle(kantoProgressbar, {
+  strokeWidth: 10,
   easing: "easeInOut",
   duration: 1400,
   color: "#F5C421",
@@ -28,8 +28,8 @@ var kanto = new ProgressBar.Circle(kantoProgressbar, {
   trailWidth: 1,
   svgStyle: null,
 });
-var chubu = new ProgressBar.Circle(chubuProgressbar, {
-  strokeWidth: 6,
+var chubuPro = new ProgressBar.Circle(chubuProgressbar, {
+  strokeWidth: 10,
   easing: "easeInOut",
   duration: 1400,
   color: "#F5C421",
@@ -37,8 +37,8 @@ var chubu = new ProgressBar.Circle(chubuProgressbar, {
   trailWidth: 1,
   svgStyle: null,
 });
-var kinki = new ProgressBar.Circle(kinkiProgressbar, {
-  strokeWidth: 6,
+var kinkiPro = new ProgressBar.Circle(kinkiProgressbar, {
+  strokeWidth: 10,
   easing: "easeInOut",
   duration: 1400,
   color: "#F5C421",
@@ -46,8 +46,8 @@ var kinki = new ProgressBar.Circle(kinkiProgressbar, {
   trailWidth: 1,
   svgStyle: null,
 });
-var chugoku = new ProgressBar.Circle(chugokuProgressbar, {
-  strokeWidth: 6,
+var chugokuPro = new ProgressBar.Circle(chugokuProgressbar, {
+  strokeWidth: 10,
   easing: "easeInOut",
   duration: 1400,
   color: "#F5C421",
@@ -55,8 +55,8 @@ var chugoku = new ProgressBar.Circle(chugokuProgressbar, {
   trailWidth: 1,
   svgStyle: null,
 });
-var shikoku = new ProgressBar.Circle(shikokuProgressbar, {
-  strokeWidth: 6,
+var shikokuPro = new ProgressBar.Circle(shikokuProgressbar, {
+  strokeWidth: 10,
   easing: "easeInOut",
   duration: 1400,
   color: "#F5C421",
@@ -64,8 +64,8 @@ var shikoku = new ProgressBar.Circle(shikokuProgressbar, {
   trailWidth: 1,
   svgStyle: null,
 });
-var kyushu = new ProgressBar.Circle(kyushuProgressbar, {
-  strokeWidth: 6,
+var kyushuPro = new ProgressBar.Circle(kyushuProgressbar, {
+  strokeWidth: 10,
   easing: "easeInOut",
   duration: 1400,
   color: "#F5C421",
@@ -74,11 +74,28 @@ var kyushu = new ProgressBar.Circle(kyushuProgressbar, {
   svgStyle: null,
 });
 
-hokkaido.animate(1.0); // Number from 0.0 to 1.0
-tohoku.animate(0.9);
-kanto.animate(0.8);
-chubu.animate(0.7);
-kinki.animate(0.6);
-chugoku.animate(0.5);
-shikoku.animate(0.4);
-kyushu.animate(0.3);
+hokkaidoPro.animate(1.0); // Number from 0.0 to 1.0
+tohokuPro.animate(0.9);
+kantoPro.animate(0.8);
+chubuPro.animate(0.7);
+kinkiPro.animate(0.6);
+chugokuPro.animate(0.5);
+shikokuPro.animate(0.4);
+kyushuPro.animate(0.3);
+
+const modalBg = document.getElementsByClassName("modal-bg")[0];
+const hokkaidoModalCon = document.getElementsByClassName(
+  "hokkaido-modal-container"
+)[0];
+const hokkaidoBtn = document.getElementById("hokkaidoProgressbar");
+hokkaidoBtn.addEventListener("click", () => {
+  modalBg.style.display = "block";
+  hokkaidoModalCon.style.display = "block";
+});
+
+const modalOff = () => {
+  modalBg.style.display = "none";
+  hokkaidoModalCon.style.display = "none";
+};
+
+modalBg.addEventListener("click", modalOff);
