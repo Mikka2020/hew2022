@@ -19,7 +19,8 @@ elseif(!check_ext($_FILES['upfile']['name'])){
 }
 if($chk){
     $ext = strtolower(pathinfo($_FILES['upfile']['name'] , PATHINFO_EXTENSION));
-    move_uploaded_file($_FILES['upfile']['tmp_name'] , './python/tmp/' . $user_id . '_' . date('YmdHis') . '.' . $ext);
+    $file_name = $user_id . '_' . date('YmdHis') . '.' . $ext;
+    move_uploaded_file($_FILES['upfile']['tmp_name'] , './python/tmp/' . $file_name);
     $exif = @exif_read_data($_FILES['upfile']['tmp_name']);
     $url = "http://localhost:8081/predict?name=" . $user_id . '_' . date('YmdHis') . '.' . $ext;
 
@@ -37,11 +38,12 @@ if($chk){
     curl_close($ch);
 
     //ユーザーIDのフォルダに格納(ユーザID_現在時刻.jpg)
-    move_uploaded_file($_FILES['upfile']['tmp_name'] , '../users/' . $user_id . '_' . date('YmdHis') . '.' . $ext);
+    copy('./python/tmp/' . $file_name , '../users/' .$user_id. '/'. $user_id . '_' . date('YmdHis') . '.' . $ext);
 
     // registersテーブルに投稿情報を格納する
-    $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8',USER_ID,PASSWORD);
-    // $db->exec("INSERT INTO 'registers' ('register_id' , 'user_id' , 'insect_id' , 'registered_at' , 'taked_at') VALUES ('" . $register_id . "','" . $user_id . "','" . $result[0]['index'] . "','" . NULL . "','" . NULL . "')");
+    $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID ,PASSWORD);
+    var_dump($db);
+    $db->exec("INSERT INTO registers(register_id , user_id , insect_id , shooting_date) VALUES ( " . $register_id . "," . $user_id . "," . $result[0]['index'] . ",NULL)");
     $result = $db->query("SELECT * FROM `quests`;");
     $quest_data_table = []; // questsテーブルに格納されている全データを取得
     while($row = $result->fetch(PDO::FETCH_ASSOC)) { // データベースから1件ずつ配列を取得する
