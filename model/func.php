@@ -27,7 +27,7 @@ function all_insect_check($user_id) {
  * 引数1:ユーザーID
  * 引数2:むしのID
  * 処理:引数1に入ってるユーザーIDが引数2に入っているむしのIDを登録している場合はtrue,登録していない場合はfalseを返す
- * true:登録ずみ
+ * true:登録済み
  * false:未登録
  */
 function insect_check($user_id,$insect_id) {
