@@ -5,7 +5,8 @@
  * true:登録済み
  * false:未登録
  */
-function all_insect_check($user_id) {
+function all_insect_check($user_id)
+{
     $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID, PASSWORD);
     $stmt = $db->prepare("SELECT * FROM registers INNER JOIN insects ON registers.insect_id = insects.insect_id AND registers.user_id = $user_id ORDER BY insects.insect_id ASC;");
     $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
@@ -14,7 +15,7 @@ function all_insect_check($user_id) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $check_data[] = $row['insect_id'];
     }
-    for ($i=0; $i < 88; $i++) { // 現在insectsテーブルに入っている全件(88)の配列にfalseを格納
+    for ($i=0; $i <= 88; $i++) { // 現在insectsテーブルに入っている全件(88)の配列にfalseを格納
         $all_check[$i] = false;
     }
     foreach ($check_data as $row) { // 登録されているinsect_id番目のfalseをtrueに書き換える
@@ -30,7 +31,8 @@ function all_insect_check($user_id) {
  * true:登録済み
  * false:未登録
  */
-function insect_check($user_id,$insect_id) {
+function insect_check($user_id, $insect_id)
+{
     $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID, PASSWORD);
     $stmt = $db->prepare("SELECT * FROM registers INNER JOIN insects ON registers.insect_id = insects.insect_id AND registers.user_id = $user_id ORDER BY insects.insect_id ASC;");
     $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
@@ -40,7 +42,7 @@ function insect_check($user_id,$insect_id) {
         $check_data[] = $row['insect_id'];
     }
     foreach ($check_data as $row) {
-        if($row == $insect_id) { // 引数2で指定したむしのIDとユーザーが登録しているむしのIDが一致した時trueを返す、一度も一致しなかった場合はfalseを返す
+        if ($row == $insect_id) { // 引数2で指定したむしのIDとユーザーが登録しているむしのIDが一致した時trueを返す、一度も一致しなかった場合はfalseを返す
             $ans = true;
             return $ans;
         } else {
@@ -55,7 +57,8 @@ function insect_check($user_id,$insect_id) {
  * 処理:引数1で指定されたユーザーIDが獲得している経験値を計算しユーザーのランクを返す
  * $user_rank:現在のユーザーランク
  */
-function user_rank($user_id) {
+function user_rank($user_id)
+{
     $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID, PASSWORD);
     $stmt = $db->prepare("SELECT * FROM cleared_quests INNER JOIN quests ON cleared_quests.cleared_quest_id = quests.quest_id AND cleared_quests.user_id = :user_id;");
     $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
@@ -74,23 +77,23 @@ function user_rank($user_id) {
 
     if (0 <= $sum_exp && $sum_exp < 3) { // 0以上3以下の場合はレベル1
         $user_rank = 1;
-    } else if (3 <= $sum_exp && $sum_exp < 10) { // 3以上10以下の場合はレベル2
+    } elseif (3 <= $sum_exp && $sum_exp < 10) { // 3以上10以下の場合はレベル2
         $user_rank = 2;
-    } else if (10 <= $sum_exp && $sum_exp < 18) { // 10以上18未満の場合はレベル3
+    } elseif (10 <= $sum_exp && $sum_exp < 18) { // 10以上18未満の場合はレベル3
         $user_rank = 3;
-    } else if (18 <= $sum_exp && $sum_exp < 26) { // 18以上26未満の場合はレベル4
+    } elseif (18 <= $sum_exp && $sum_exp < 26) { // 18以上26未満の場合はレベル4
         $user_rank = 4;
-    } else if (26 <= $sum_exp && $sum_exp < 42) { // 26以上42未満の場合はレベル5
+    } elseif (26 <= $sum_exp && $sum_exp < 42) { // 26以上42未満の場合はレベル5
         $user_rank = 5;
-    } else if (42 <= $sum_exp && $sum_exp < 57) { // 42以上57未満の場合はレベル6
+    } elseif (42 <= $sum_exp && $sum_exp < 57) { // 42以上57未満の場合はレベル6
         $user_rank = 6;
-    } else if (57 <= $sum_exp && $sum_exp < 77) { // 57以上77未満の場合はレベル7
+    } elseif (57 <= $sum_exp && $sum_exp < 77) { // 57以上77未満の場合はレベル7
         $user_rank = 7;
-    } else if (77 <= $sum_exp && $sum_exp < 100) { // 77以上100未満の場合はレベル8
+    } elseif (77 <= $sum_exp && $sum_exp < 100) { // 77以上100未満の場合はレベル8
         $user_rank = 8;
-    } else if (100 <= $sum_exp && $sum_exp < 125) { // 100以上125未満の場合はレベル9
+    } elseif (100 <= $sum_exp && $sum_exp < 125) { // 100以上125未満の場合はレベル9
         $user_rank = 9;
-    } else if (125 <= $sum_exp) { // 125以上の場合はレベル10
+    } elseif (125 <= $sum_exp) { // 125以上の場合はレベル10
         $user_rank = 10;
     }
     return $user_rank;
