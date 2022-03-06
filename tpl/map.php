@@ -15,57 +15,64 @@
     <p>マップ</p>
   </header>
   <main>
-    <div class="example-container" id="example-circle-container"></div>
-    <p class="explanation-text">図鑑にとうろくして全てのむしを集めよう！</p>
-    <div id="map-container">
-      <div class="ratio-container">
+    <p class="explanation-text">図鑑に登録して全てのむしを集めよう！</p>
+    <article id="map-container">
+      <section class="ratio-container">
         <ul>
           <li>コンプリート率</li>
           <li>42/88</li>
         </ul>
-      </div>
-      <div id="hokkaidoProgressbar" class="progressbar-container">
+      </section>
+      <section id="hokkaidoProgressbar" class="progressbar-container">
         <div>
-          北海道
         </div>
-      </div>
-      <div id="tohokuProgressbar" class="progressbar-container">
+      </section>
+      <section id="tohokuProgressbar" class="progressbar-container">
         <div>
-          東北
         </div>
-      </div>
-      <div id="kantoProgressbar" class="progressbar-container">
+      </section>
+      <section id="kantoProgressbar" class="progressbar-container">
         <div>
-          関東
         </div>
-      </div>
-      <div id="chubuProgressbar" class="progressbar-container">
+      </section>
+      <section id="chubuProgressbar" class="progressbar-container">
         <div>
-          中部
         </div>
-      </div>
-      <div id="kinkiProgressbar" class="progressbar-container">
+      </section>
+      <section id="kinkiProgressbar" class="progressbar-container">
         <div>
-          近畿
         </div>
-      </div>
-      <div id="chugokuProgressbar" class="progressbar-container">
+      </section>
+      <section id="chugokuProgressbar" class="progressbar-container">
         <div>
-          中国
         </div>
-      </div>
-      <div id="shikokuProgressbar" class="progressbar-container">
+      </section>
+      <section id="shikokuProgressbar" class="progressbar-container">
         <div>
-          四国
         </div>
-      </div>
-      <div id="kyushuProgressbar" class="progressbar-container">
+      </section>
+      <section id="kyushuProgressbar" class="progressbar-container">
         <div>
-          九州
-          沖縄
         </div>
-      </div>
-    </div>
+      </section>
+    </article>
+    <div class="modal-bg"></div>
+    <article id="modal-container">
+      <section class="hokkaido-modal-container modal-content">
+        <h3>北海道</h3>
+        <ul>
+          <li>
+            <img src="./../img/icon/no-data-icon.png" alt="">
+          </li>
+          <li>
+            <img src="./../img/icon/no-data-icon.png" alt="">
+          </li>
+          <li>
+            <img src="./../img/icon/no-data-icon.png" alt="">
+          </li>
+        </ul>
+      </section>
+    </article>
   </main>
   <footer>
     <?php require_once './footer.php'; ?>
