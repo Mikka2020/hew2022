@@ -29,8 +29,8 @@
     </div>
     <ul class="contents-tabs">
       <li id="tab-1" class="active-tab">がいよう</li>
-      <li id="tab-2">せつめい</li>
-      <li id="tab-3">まめちしき</li>
+      <li id="<?php echo $tab_id[2]; ?>">せつめい</li>
+      <li id="<?php echo $tab_id[3]; ?>">まめちしき</li>
     </ul>
     <section id="content-1" class="active-content">
       <dl>

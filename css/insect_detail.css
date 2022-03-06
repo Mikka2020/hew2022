@@ -51,6 +51,11 @@
   border-bottom: 0;
 }
 
+.contents-tabs #not-release-2,
+.contents-tabs #not-release-3 {
+  background-color: #dddddd;
+}
+
 section {
   border: solid 2px #6b3404;
   border-top: 0;
