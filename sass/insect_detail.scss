@@ -27,9 +27,12 @@ $mushi-brown: #6b3404;
     height: 40px;
     line-height: 40px;
     border-radius: 15px 15px 0 0;
+    -webkit-text-stroke: 1px;
+    color: #fff;
   }
   .active {
     background-color: #fff;
+    color: $mushi-brown;
     border-bottom: 0;
   }
   text-align: center;
