@@ -29,6 +29,18 @@ header {
   text-align: center;
 }
 
+header .back-icon {
+  position: relative;
+}
+
+header .back-icon img {
+  position: absolute;
+  left: 3vh;
+  top: 3.3vh;
+  -webkit-filter: drop-shadow(0 1px 0 #6b3404);
+          filter: drop-shadow(0 1px 0 #6b3404);
+}
+
 main {
   margin-top: 12vh;
   margin-bottom: 12vh;

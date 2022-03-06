@@ -29,6 +29,17 @@ header {
   color: $mushi-brown;
   -webkit-text-stroke-width: 2px;
   text-align: center;
+  // display: flex;
+  .back-icon {
+    position: relative;
+    img {
+      position: absolute;
+      left: 3vh;
+      top: 3.3vh;
+      // margin-top: 3vh;
+      filter: drop-shadow(0 1px 0 $mushi-brown);
+    }
+  }
 }
 main {
   margin-top: 12vh;
