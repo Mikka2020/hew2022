@@ -69,6 +69,6 @@ if (0 <= $sum_exp && $sum_exp < 3) { // 0以上3以下の場合はレベル1
     $user_level = 8;
 } else if (100 <= $sum_exp && $sum_exp < 125) { // 100以上125未満の場合はレベル9
     $user_level = 9;
-} else if (125 <= $sum_exp && $sum_exp < 157) { // 125以上157未満の場合はレベル10
+} else if (125 <= $sum_exp) { // 125以上の場合はレベル10
     $user_level = 10;
 }
