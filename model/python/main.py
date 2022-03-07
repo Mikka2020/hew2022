@@ -66,7 +66,7 @@ value_list = [
   'monkicyou',
   'monsirocyou',
   'yamatoshijimi',
-  'yamatoshijimi',
+  'yonagunisan',
   'unmontentou',
   'kamenokotentou',
   'kiirotentou',

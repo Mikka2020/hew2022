@@ -30,6 +30,7 @@ kabutomushi
 kamenokotentou
 kanabun
 karasuageha
+kawarabatta
 kera
 kiageha
 kiirotentou
@@ -51,6 +52,8 @@ matsumushi
 minminzemi
 misujimaimai
 miyamakuwagata
+monkicyou
+monshirocyou
 muneakaooari
 namiamenbo
 namitentou
@@ -66,12 +69,14 @@ oogomadara
 ookamakiri
 ookuwagata
 oominoga
+oomurasaki
 oozoumushi
 ruriboshikamikiri
 saikabutomushi
 shimaamenbo
 shiokaratonbo
 shouryoubatta
+sirosuzikamikiri
 suzumushi
 tonosamabatta
 tsuchiinago
@@ -79,4 +84,5 @@ tsukutsukuboushi
 unmontentou
 yabukiri
 yamatoshijimi
+yamatotamamushi
 yonagunisan
