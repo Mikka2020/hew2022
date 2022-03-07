@@ -116,7 +116,8 @@ function registered_counter($user_id)
  * 引数１：むしのID
  * 返り値:むしの名前
  */
-function insert_insect_id ($insect_id) {
+function insert_insect_id($insect_id)
+{
     $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID, PASSWORD);
     $stmt = $db->prepare("SELECT * FROM `insects` WHERE `insect_id` = '" . $insect_id . "'");
     $stmt->execute();
@@ -125,4 +126,15 @@ function insert_insect_id ($insect_id) {
     }
     $db = null;
     return $insect_name;
+}
+
+/**
+ * 処理:ログインしてなければログイン画面へ遷移する
+ */
+function toLogin()
+{
+    if (!isset($_COOKIE['user_id'])) {
+        header('location:./login.php');
+        exit;
+    }
 }

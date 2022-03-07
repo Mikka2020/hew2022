@@ -4,6 +4,7 @@
 require_once '../../config.php';
 // 関数の読込み
 require_once '../model/func.php';
+toLogin();
 
 // modelの読込み
 require_once '../model/home.php';
