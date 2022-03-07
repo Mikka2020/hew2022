@@ -13,14 +13,26 @@
 </head>
 
 <body>
+  <header>
+    <h1><img src="./../img/icon/むしコレロゴ.png" alt="むしコレロゴ"></h1>
+  </header>
 
   <main>
-    <form action="" method="post">
-      <input type="text" name="login_id">
-      <input type="password" name="password">
-      <button type="submit" name="btn">ログイン</button>
-    </form>
+    <h2>ログイン</h2>
+    <article class="login-area">
+      <form action="" method="post">
+        <p>ログインID</p>
+        <input type="text" name="login_id" placeholder="ログインIDを入力">
+        <p>パスワード</p>
+        <input type="password" name="password" placeholder="パスワードを入力">
+        <button type="submit" name="btn">ログイン</button>
+      </form>
+    </article>
   </main>
+
+  <footer>
+    
+  </footer>
 
 </body>
 
