@@ -101,7 +101,7 @@ body {
 }
 
 #map-container #kinkiProgressbar div {
-  background-image: url("./../img/icon/kinki");
+  background-image: url("./../img/icon/kinki.svg");
 }
 
 #map-container #chugokuProgressbar {
