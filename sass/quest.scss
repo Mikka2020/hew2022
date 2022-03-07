@@ -1,0 +1,71 @@
+@import url("./destyle.css");
+@import url("./style.css");
+$mushi-green: #bed636;
+$mushi-brown: #755e3c;
+$mushi-orange: #f5c421;
+
+#quests {
+  width: 90vw;
+  background-color: #755e3c;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 20px;
+  h2 {
+    background-color: #fff;
+    width: 40%;
+    border: 1px solid #755e3c;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    margin: 0 auto;
+    // margin-top: -0.6rem;
+    position: relative;
+    top: -0.8rem;
+    margin-bottom: 1rem;
+  }
+  ul {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    li {
+      background-color: #fff;
+      width: 31%;
+      text-align: center;
+      border-radius: 24px;
+      padding: 0.2rem;
+      font-size: 0.9rem;
+      color: $mushi-orange;
+      -webkit-text-stroke: 1px;
+    }
+    li:nth-child(2) {
+      background-color: $mushi-orange;
+      color: #fff;
+    }
+  }
+  .quest-container {
+    background-color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 75px;
+    margin-bottom: 1rem;
+    // height: 90%;
+    // padding-bottom: 2rem;
+    p:first-child {
+      padding-top: 0.5rem;
+      margin-left: 10%;
+      margin-right: 3rem;
+      margin-bottom: 1.6rem;
+      white-space: nowrap;
+    }
+    p:last-child {
+      text-align: right;
+      margin-right: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}
