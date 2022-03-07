@@ -100,16 +100,16 @@ function user_rank($user_id)
 }
 
 /**
- * 引数１：虫の名前
- * 処理：引数で指定された名前からIDを返す
+ * 引数１：虫のID
+ * 処理：引数で指定されたIDから名前を返す
  */
-function insert_insect_id ($insect_name) {
+function insert_insect_id ($insect_id) {
     $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID, PASSWORD);
-    $stmt = $db->prepare("SELECT * FROM `insects` WHERE `insect_name` = '" . $insect_name . "'");
+    $stmt = $db->prepare("SELECT * FROM `insects` WHERE `insect_id` = '" . $insect_id . "'");
     $stmt->execute();
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $insect_id = $row['insect_id'];
+        $insect_name = $row['insect_name'];
     }
     $db = null;
-    return $insect_id;
+    return $insect_name;
 }
