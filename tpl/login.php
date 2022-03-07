@@ -8,24 +8,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./../css/insect_detail.css">
+  <link rel="stylesheet" href="./../css/login.css">
   <title>ログイン</title>
 </head>
 
 <body>
   <header>
-    <div class="logo"></div>
+    <h1><img src="./../img/icon/むしコレロゴ.png" alt="むしコレロゴ"></h1>
   </header>
+
   <main>
-    <form action="" method="post">
-      <input type="text" name="login_id">
-      <input type="password" name="password">
-      <button type="submit" name="btn">ログイン</button>
-    </form>
+    <h2>ログイン</h2>
+    <article class="login-area">
+      <form action="" method="post">
+        <p>ログインID</p>
+        <input type="text" name="login_id" placeholder="ログインIDを入力">
+        <p>パスワード</p>
+        <input type="password" name="password" placeholder="パスワードを入力">
+        <button type="submit" name="btn">ログイン</button>
+      </form>
+    </article>
   </main>
+
   <footer>
-    <?php require_once 'footer.php'; ?>
+    
   </footer>
+
 </body>
 
 </html>
