@@ -26,7 +26,7 @@
   <main>
     <div class="insect-img-container">
       <img class="<?php echo insect_check($_COOKIE['user_id'], $_GET['id'])? "insect-img" : "no-insect-img"; ?>"
-        src="<?php echo insect_check($_COOKIE['user_id'], $_GET['id'])? "./../img/insects/kabutomushi.jpg" : "./../img/icon/no-data-detail.svg"; ?>"
+        src="<?php echo insect_check($_COOKIE['user_id'], $_GET['id'])? "./../users/".$_COOKIE['user_id']."/".$_COOKIE['user_id']."_".$insect['insects_insect_id'].'_1'.$insect['ext'] : "./../img/icon/no-data-detail.svg"; ?>"
         alt="<?php echo $insect_data['insect_name']; ?>の画像">
     </div>
     <ul class="contents-tabs">
