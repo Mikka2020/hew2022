@@ -5,7 +5,7 @@
   margin-bottom: 1rem;
   width: 80vw;
   height: 50vw;
-  border: 1px solid #6b3404;
+  border: 1px solid #755e3c;
   border-radius: 5px;
   background-image: url("./../img/icon/select-photo.svg");
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@
 }
 
 #select-container label #preview {
-  border: 1px solid #6b3404;
+  border: 1px solid #755e3c;
   border-radius: 5px;
   width: 80vw;
   height: 50vw;
@@ -39,7 +39,7 @@
 #text-container {
   margin: 0 auto;
   border-radius: 5px;
-  border: 1px solid #6b3404;
+  border: 1px solid #755e3c;
   background-color: #fff;
   width: 90vw;
   padding: 1rem;
@@ -66,7 +66,7 @@
 #text-container .btn-container button {
   margin: 0 auto;
   display: block;
-  border: 1px solid #6b3404;
+  border: 1px solid #755e3c;
   border-radius: 5px;
   background-color: #f5c421;
   padding: 0.5rem;

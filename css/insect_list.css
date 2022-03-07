@@ -15,7 +15,7 @@ main .sort-tab {
 }
 
 main .sort-tab li {
-  border: solid 2px #6b3404;
+  border: solid 2px #755e3c;
   border-radius: 15px 15px 0 0;
   background-color: #f5c421;
   text-align: center;
@@ -29,7 +29,7 @@ main .sort-tab li {
 main .sort-tab .active {
   border-bottom: 0;
   background-color: #fff;
-  color: #6b3404;
+  color: #755e3c;
 }
 
 main #category-container {
@@ -37,7 +37,7 @@ main #category-container {
   width: 90vw;
   margin: 0 auto;
   border-radius: 0 0 15px 15px;
-  border: solid 2px #6b3404;
+  border: solid 2px #755e3c;
   border-top: 0;
   height: 85%;
   overflow: auto;
@@ -48,7 +48,7 @@ main #category-container section {
 }
 
 main #category-container section h2 {
-  background-color: #6b3404;
+  background-color: #755e3c;
   color: #fff;
   text-align: center;
   margin: 0 auto;

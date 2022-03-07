@@ -8,7 +8,7 @@ footer {
 * {
   font-family: "Yomogi", cursive;
   font-weight: bold;
-  color: #6b3404;
+  color: #755e3c;
 }
 
 body {
@@ -24,7 +24,7 @@ header {
   background-color: #bed636;
   font-size: 2rem;
   line-height: 10vh;
-  color: #6b3404;
+  color: #755e3c;
   -webkit-text-stroke-width: 2px;
   text-align: center;
 }
@@ -37,8 +37,8 @@ header .back-icon img {
   position: absolute;
   left: 3vh;
   top: 3.3vh;
-  -webkit-filter: drop-shadow(0 1px 0 #6b3404);
-          filter: drop-shadow(0 1px 0 #6b3404);
+  -webkit-filter: drop-shadow(0 1px 0 #755e3c);
+          filter: drop-shadow(0 1px 0 #755e3c);
 }
 
 main {
