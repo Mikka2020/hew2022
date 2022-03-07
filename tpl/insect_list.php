@@ -35,7 +35,7 @@
             <li class="insect-img-container">
               <a href="./insect_detail.php?id=<?php echo $insect['insects_insect_id']; ?>">
                 <img
-                  src="<?php echo all_insect_check($_COOKIE['user_id'])[$insect['insects_insect_id']]? './../users/'.$_COOKIE['user_id'].'/'.$_COOKIE['user_id'].'_'.$insect['insects_insect_id'].'_1.jpg' : './../img/icon/no-data-icon.png'; ?>"
+                  src="<?php echo all_insect_check($_COOKIE['user_id'])[$insect['insects_insect_id']]? './../users/'.$_COOKIE['user_id'].'/'.$_COOKIE['user_id'].'_'.$insect['insects_insect_id'].'_1.'.$insect['ext'] : './../img/icon/no-data-icon.png'; ?>"
                   alt="<?php echo $insect["insect_name"]; ?>の画像" width="80px" height="80px">
               </a>
             </li>
