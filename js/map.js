@@ -143,7 +143,7 @@ $(function () {
               `
               <ul>
                 <li>
-                  <img src="./../users/${userId}/${userId}_${j["insect_id"]}_1.${j["ext"]}">
+                  <img src="./../users/${userId}/${userId}_${j["insects_insect_id"]}_1.${j["ext"]}">
                 </li>
                 <li>
                   ${j["insect_name"]}
