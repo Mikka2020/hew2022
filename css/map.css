@@ -60,8 +60,8 @@ body {
 }
 
 #map-container #hokkaidoProgressbar {
-  top: 0;
-  right: 0;
+  top: 10vw;
+  right: 10vw;
 }
 
 #map-container #hokkaidoProgressbar div {
@@ -69,8 +69,8 @@ body {
 }
 
 #map-container #tohokuProgressbar {
-  top: 100px;
-  right: 100px;
+  top: 36vw;
+  right: 36vw;
 }
 
 #map-container #tohokuProgressbar div {
@@ -78,8 +78,8 @@ body {
 }
 
 #map-container #kantoProgressbar {
-  top: 400px;
-  right: 0;
+  bottom: 26vw;
+  right: 10vw;
 }
 
 #map-container #kantoProgressbar div {
@@ -87,8 +87,8 @@ body {
 }
 
 #map-container #chubuProgressbar {
-  top: 400px;
-  right: 100px;
+  bottom: 15vw;
+  right: 30vw;
 }
 
 #map-container #chubuProgressbar div {
@@ -96,8 +96,8 @@ body {
 }
 
 #map-container #kinkiProgressbar {
-  top: 200px;
-  right: 200px;
+  top: 54vw;
+  left: 26vw;
 }
 
 #map-container #kinkiProgressbar div {
@@ -105,8 +105,8 @@ body {
 }
 
 #map-container #chugokuProgressbar {
-  top: 200px;
-  right: 300px;
+  bottom: 40vw;
+  left: 5vw;
 }
 
 #map-container #chugokuProgressbar div {
@@ -114,8 +114,8 @@ body {
 }
 
 #map-container #shikokuProgressbar {
-  top: 400px;
-  right: 200px;
+  bottom: 7vw;
+  left: 20vw;
 }
 
 #map-container #shikokuProgressbar div {
@@ -123,8 +123,8 @@ body {
 }
 
 #map-container #kyushuProgressbar {
-  top: 450px;
-  right: 300px;
+  bottom: 2vw;
+  left: 2vw;
 }
 
 #map-container #kyushuProgressbar div {

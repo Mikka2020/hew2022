@@ -56,57 +56,59 @@ body {
     }
   }
   #hokkaidoProgressbar {
-    top: 0;
-    right: 0;
+    top: 10vw;
+    right: 10vw;
     div {
       background-image: url("./../img/icon/hokkaido.svg");
     }
   }
   #tohokuProgressbar {
-    top: 100px;
-    right: 100px;
+    top: 36vw;
+    right: 36vw;
     div {
       background-image: url("./../img/icon/tohoku.svg");
     }
   }
   #kantoProgressbar {
-    top: 400px;
-    right: 0;
+    bottom: 26vw;
+    right: 10vw;
     div {
       background-image: url("./../img/icon/kanto.svg");
     }
   }
   #chubuProgressbar {
-    top: 400px;
-    right: 100px;
+    bottom: 15vw;
+    right: 30vw;
     div {
       background-image: url("./../img/icon/chubu.svg");
     }
   }
   #kinkiProgressbar {
-    top: 200px;
-    right: 200px;
+    top: 54vw;
+    left: 26vw;
     div {
       background-image: url("./../img/icon/kinki.svg");
     }
   }
   #chugokuProgressbar {
-    top: 200px;
-    right: 300px;
+    bottom: 40vw;
+    left: 5vw;
     div {
       background-image: url("./../img/icon/chugoku.svg");
     }
   }
   #shikokuProgressbar {
-    top: 400px;
-    right: 200px;
+    bottom: 7vw;
+    left: 20vw;
     div {
       background-image: url("./../img/icon/shikoku.svg");
     }
   }
   #kyushuProgressbar {
-    top: 450px;
-    right: 300px;
+    // top: 450px;
+    bottom: 2vw;
+    // right: 300px;
+    left: 2vw;
     div {
       background-image: url("./../img/icon/kyushu.svg");
     }
