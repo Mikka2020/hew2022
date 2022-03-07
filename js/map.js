@@ -135,35 +135,29 @@ $(function () {
     .done((data) => {
       $(data).each(function (i, j) {
         const prefId = j["pref_id"];
+        const insectModalDomData = `
+          <a href="./insect_detail.php?id=${j["insects_insect_id"]}">
+            <ul>
+              <li><img src="./../users/${userId}/${userId}_${j["insects_insect_id"]}_1.${j["ext"]}"></li>
+              <li>${j["insect_name"]}</li>
+            </ul>
+          </a>
+          `;
+        const noDataModalDomData = `
+              <a href="./insect_detail.php?id=${j["insects_insect_id"]}">
+                <ul>
+                  <li><img src="./../img/icon/no-data-icon.svg"></li>
+                  <li>${j["insect_name"]}</li>
+                </ul>
+              </a>
+              `;
         if (prefId == 1) {
           hokkaidoInsectCnt++;
           if (this.id != null) {
             hokkaidoRegCnt++;
-            $("#hokkaido-div").append(
-              `
-              <ul>
-                <li>
-                  <img src="./../users/${userId}/${userId}_${j["insects_insect_id"]}_1.${j["ext"]}">
-                </li>
-                <li>
-                  ${j["insect_name"]}
-                </li>
-              </ul>
-              `
-            );
+            $("#hokkaido-div").append(insectModalDomData);
           } else {
-            $("#hokkaido-div").append(
-              `
-              <ul>
-                <li>
-                  <img src="./../img/icon/no-data-icon.svg">
-                </li>
-                <li>
-                  ${j["insect_name"]}
-                </li>
-              </ul>
-              `
-            );
+            $("#hokkaido-div").append(noDataModalDomData);
           }
         } else if (
           j.pref_id == 2 ||
@@ -176,6 +170,9 @@ $(function () {
           tohokuInsectCnt++;
           if (this.id != null) {
             tohokuRegCnt++;
+            $("#tohoku-div").append(insectModalDomData);
+          } else {
+            $("#tohoku-div").append(noDataModalDomData);
           }
         } else if (
           j.pref_id == 8 ||
@@ -189,21 +186,27 @@ $(function () {
           kantoInsectCnt++;
           if (this.id != null) {
             kantoRegCnt++;
+            $("#kanto-div").append(insectModalDomData);
+          } else {
+            $("#kanto-div").append(noDataModalDomData);
           }
         } else if (
-          j.prefId == 15 ||
-          j.prefId == 16 ||
-          j.prefId == 17 ||
-          j.prefId == 18 ||
-          j.prefId == 19 ||
-          j.prefId == 20 ||
-          j.prefId == 21 ||
-          j.prefId == 22 ||
-          j.prefId == 23
+          j.pref_id == 15 ||
+          j.pref_id == 16 ||
+          j.pref_id == 17 ||
+          j.pref_id == 18 ||
+          j.pref_id == 19 ||
+          j.pref_id == 20 ||
+          j.pref_id == 21 ||
+          j.pref_id == 22 ||
+          j.pref_id == 23
         ) {
           chubuInsectCnt++;
           if (this.id != null) {
             chubuRegCnt++;
+            $("#chubu-div").append(insectModalDomData);
+          } else {
+            $("#chubu-div").append(noDataModalDomData);
           }
         } else if (
           j.pref_id == 24 ||
@@ -217,6 +220,9 @@ $(function () {
           kinkiInsectCnt++;
           if (this.id != null) {
             kinkiRegCnt++;
+            $("#kinki-div").append(insectModalDomData);
+          } else {
+            $("#kinki-div").append(noDataModalDomData);
           }
         } else if (
           j.pref_id == 31 ||
@@ -228,6 +234,9 @@ $(function () {
           chugokuInsectCnt++;
           if (this.id != null) {
             chugokuRegCnt++;
+            $("#chugoku-div").append(insectModalDomData);
+          } else {
+            $("#chugoku-div").append(noDataModalDomData);
           }
         } else if (
           j.pref_id == 36 ||
@@ -238,6 +247,9 @@ $(function () {
           shikokuInsectCnt++;
           if (this.id != null) {
             shikokuRegCnt++;
+            $("#shikoku-div").append(insectModalDomData);
+          } else {
+            $("#shikoku-div").append(noDataModalDomData);
           }
         } else if (
           j.pref_id == 40 ||
@@ -252,6 +264,9 @@ $(function () {
           kyushuInsectCnt++;
           if (this.id != null) {
             kyushuRegCnt++;
+            $("#kyushu-div").append(insectModalDomData);
+          } else {
+            $("#kyushu-div").append(noDataModalDomData);
           }
         }
       });
@@ -274,7 +289,21 @@ $(function () {
     });
 });
 
+// モーダル処理
 const modalBg = document.getElementsByClassName("modal-bg")[0];
+const modalOff = () => {
+  modalBg.style.display = "none";
+  hokkaidoModalCon.style.display = "none";
+  tohokuModalCon.style.display = "none";
+  kantoModalCon.style.display = "none";
+  chubuModalCon.style.display = "none";
+  kinkiModalCon.style.display = "none";
+  chugokuModalCon.style.display = "none";
+  shikokuModalCon.style.display = "none";
+  kyushuModalCon.style.display = "none";
+};
+modalBg.addEventListener("click", modalOff);
+// 北海道のモーダル処理
 const hokkaidoModalCon = document.getElementsByClassName(
   "hokkaido-modal-container"
 )[0];
@@ -283,10 +312,66 @@ hokkaidoBtn.addEventListener("click", () => {
   modalBg.style.display = "block";
   hokkaidoModalCon.style.display = "block";
 });
-
-const modalOff = () => {
-  modalBg.style.display = "none";
-  hokkaidoModalCon.style.display = "none";
-};
-
-modalBg.addEventListener("click", modalOff);
+// 東北のモーダル処理
+const tohokuModalCon = document.getElementsByClassName(
+  "tohoku-modal-container"
+)[0];
+const tohokuBtn = document.getElementById("tohokuProgressbar");
+tohokuBtn.addEventListener("click", () => {
+  modalBg.style.display = "block";
+  tohokuModalCon.style.display = "block";
+});
+// 関東のモーダル処理
+const kantoModalCon = document.getElementsByClassName(
+  "kanto-modal-container"
+)[0];
+const kantoBtn = document.getElementById("kantoProgressbar");
+kantoBtn.addEventListener("click", () => {
+  modalBg.style.display = "block";
+  kantoModalCon.style.display = "block";
+});
+// 中部のモーダル処理
+const chubuModalCon = document.getElementsByClassName(
+  "chubu-modal-container"
+)[0];
+const chubuBtn = document.getElementById("chubuProgressbar");
+chubuBtn.addEventListener("click", () => {
+  modalBg.style.display = "block";
+  chubuModalCon.style.display = "block";
+});
+// 近畿のモーダル処理
+const kinkiModalCon = document.getElementsByClassName(
+  "kinki-modal-container"
+)[0];
+const kinkiBtn = document.getElementById("kinkiProgressbar");
+kinkiBtn.addEventListener("click", () => {
+  modalBg.style.display = "block";
+  kinkiModalCon.style.display = "block";
+});
+// 中国のモーダル処理
+const chugokuModalCon = document.getElementsByClassName(
+  "chugoku-modal-container"
+)[0];
+const chugokuBtn = document.getElementById("chugokuProgressbar");
+chugokuBtn.addEventListener("click", () => {
+  modalBg.style.display = "block";
+  chugokuModalCon.style.display = "block";
+});
+// 四国のモーダル処理
+const shikokuModalCon = document.getElementsByClassName(
+  "shikoku-modal-container"
+)[0];
+const shikokuBtn = document.getElementById("shikokuProgressbar");
+shikokuBtn.addEventListener("click", () => {
+  modalBg.style.display = "block";
+  shikokuModalCon.style.display = "block";
+});
+// 九州のモーダル処理
+const kyushuModalCon = document.getElementsByClassName(
+  "kyushu-modal-container"
+)[0];
+const kyushuBtn = document.getElementById("kyushuProgressbar");
+kyushuBtn.addEventListener("click", () => {
+  modalBg.style.display = "block";
+  kyushuModalCon.style.display = "block";
+});

@@ -157,6 +157,13 @@ body {
   display: none;
 }
 
+#modal-container .modal-content img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .modal-bg {
   display: none;
   background-color: rgba(0, 0, 0, 0.5);
