@@ -17,17 +17,17 @@ $photo_cnt = count($folder) + 1;
 $_SESSION['new_filename'] = $user_id . '_' . $_SESSION['insect_id'] . '_' . $photo_cnt . '.' . $ext;
 
 //ユーザーIDのフォルダに格納(ユーザID_虫ID_枚数.jpg)
-copy('../model/python/tmp/' . $_SESSION['file_name'] , '../users/' .$user_id. '/'. $_SESSION['new_filename']);
+copy('../model/python/tmp/' . $_SESSION['file_name'], '../users/' .$user_id. '/'. $_SESSION['new_filename']);
 //tmpフォルダの画像を削除
 unlink('../model/python/tmp/' . $_SESSION['file_name']);
 
 // registersテーブルに投稿情報を格納する
-$db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID ,PASSWORD);
+$db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID, PASSWORD);
 var_dump($db);
-$db->exec("INSERT INTO registers(register_id , user_id , insect_id , shooting_date , ext) VALUES ( " . $register_id . "," . $user_id . "," . $_SESSION['insect_id'] . ",NULL," . $ext . ");");
+$db->exec("INSERT INTO registers(register_id , user_id , insect_id , shooting_date , ext) VALUES ( " . $register_id . "," . $user_id . "," . $_SESSION['insect_id'] . ",NULL,'" . $ext . "');");
 $result = $db->query("SELECT * FROM `quests`;");
 $quest_data_table = []; // questsテーブルに格納されている全データを取得
-while($row = $result->fetch(PDO::FETCH_ASSOC)) { // データベースから1件ずつ配列を取得する
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) { // データベースから1件ずつ配列を取得する
     $quest_data_table[] = $row;
 }
 $db = null; // 終了
