@@ -87,6 +87,7 @@ $(function () {
       }
     }
   }
+  const userId = returnLoginUserId();
   // InsectCnt はその地方に含まれる種の数
   // RegCnt は　ユーザが登録している種の数
   let hokkaidoInsectCnt = 0;
@@ -133,11 +134,36 @@ $(function () {
   })
     .done((data) => {
       $(data).each(function (i, j) {
-        const prefId = j.pref_id;
-        if (this.pref_id == 1) {
+        const prefId = j["pref_id"];
+        if (prefId == 1) {
           hokkaidoInsectCnt++;
           if (this.id != null) {
             hokkaidoRegCnt++;
+            $("#hokkaido-div").append(
+              `
+              <ul>
+                <li>
+                  <img src="./../users/${userId}/${userId}_${j["insect_id"]}_1.${j["ext"]}">
+                </li>
+                <li>
+                  ${j["insect_name"]}
+                </li>
+              </ul>
+              `
+            );
+          } else {
+            $("#hokkaido-div").append(
+              `
+              <ul>
+                <li>
+                  <img src="./../img/icon/no-data-icon.svg">
+                </li>
+                <li>
+                  ${j["insect_name"]}
+                </li>
+              </ul>
+              `
+            );
           }
         } else if (
           j.pref_id == 2 ||

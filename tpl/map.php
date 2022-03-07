@@ -65,17 +65,35 @@
     <article id="modal-container">
       <section class="hokkaido-modal-container modal-content">
         <h3>北海道</h3>
-        <ul>
-          <li>
-            <img src="./../img/icon/no-data-icon.png" alt="">
-          </li>
-          <li>
-            <img src="./../img/icon/no-data-icon.png" alt="">
-          </li>
-          <li>
-            <img src="./../img/icon/no-data-icon.png" alt="">
-          </li>
-        </ul>
+        <div id="hokkaido-div"></div>
+      </section>
+      <section class="tohoku-modal-container modal-content">
+        <h3>東北地方</h3>
+        <div id="tohoku-div"></div>
+      </section>
+      <section class="kanto-modal-container modal-content">
+        <h3>関東地方</h3>
+        <div id="kanto-div"></div>
+      </section>
+      <section class="chubu-modal-container modal-content">
+        <h3>中部地方</h3>
+        <div id="chubu-div"></div>
+      </section>
+      <section class="kinki-modal-container modal-content">
+        <h3>近畿地方</h3>
+        <div id="kinki-div"></div>
+      </section>
+      <section class="chugoku-modal-container modal-content">
+        <h3>中国地方</h3>
+        <div id="chugoku-div"></div>
+      </section>
+      <section class="shikoku-modal-container modal-content">
+        <h3>四国地方</h3>
+        <div id="shikoku-div"></div>
+      </section>
+      <section class="kyushu-modal-container modal-content">
+        <h3>九州地方</h3>
+        <div id="kyushu-div"></div>
       </section>
     </article>
   </main>
