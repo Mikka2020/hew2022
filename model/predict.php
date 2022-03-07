@@ -1,5 +1,10 @@
 <?php
 
+//変数初期化
+$chk = true;
+// テスト用ログイン
+$user_id = 1;
+
 //アップロードされたファイル名の拡張子が許可されているか確認
 function check_ext($filename){
     //許可する拡張子
@@ -8,22 +13,22 @@ function check_ext($filename){
     return in_array($ext, $cfg['ALLOW_EXTS']);
 }
 
-if($_FILES['upfile']['error'] > 0){
+if($_FILES['insect_img']['error'] > 0){
     $error['file'] = "ファイルエラーです"; //エラー文表示
     $chk = false;
 }
 //ファイルの拡張子チェック
-elseif(!check_ext($_FILES['upfile']['name'])){
+elseif(!check_ext($_FILES['insect_img']['name'])){
     $error['file']= "この形式のファイルはアップロードできません";
     $chk = false;
 }
 if($chk){
-    $ext = strtolower(pathinfo($_FILES['upfile']['name'] , PATHINFO_EXTENSION));
+    $ext = strtolower(pathinfo($_FILES['insect_img']['name'] , PATHINFO_EXTENSION));
     $file_name = $user_id . '_' . date('YmdHis') . '.' . $ext;
-    move_uploaded_file($_FILES['upfile']['tmp_name'] , './python/tmp/' . $file_name);
+    move_uploaded_file($_FILES['insect_img']['tmp_name'] , '../model/python/tmp/' . $file_name);
     $exif = @exif_read_data($_FILES['upfile']['tmp_name']);
     //api server
-    $url = "http://localhost:8081/predict?name=" . $user_id . '_' . date('YmdHis') . '.' . $ext;
+    $url = "http://localhost:8081/predict?name=" . $file_name;
 
     // cURLセッションを初期化
     $ch = curl_init();
@@ -38,6 +43,14 @@ if($chk){
     // セッションを終了
     curl_close($ch);
 
+    session_start();
+    //判別結果をセッションに保存
+    $_SESSION['result'] = $result;
     //画像一時表示ファイルパス
-    $file_pass = './python/tmp' . '$file_name';
+    $_SESSION['file_name'] = $file_name;
+    //画像拡張子
+    $_SESSION['ext'] = $ext;
+    header('location: ./insect_datamine.php');
 }
+
+

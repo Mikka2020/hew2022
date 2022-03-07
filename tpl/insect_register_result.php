@@ -15,11 +15,11 @@
   </header>
   <main>
     <section id="img-container">
-      <img src="" alt="">
+      <img src="../model/python/tmp/<?php echo $file_name; ?>" alt="">
     </section>
     <section id="text-container">
       <h2>
-        <span><?php echo "オオムラサキ"; ?></span>が
+        <span><?php echo $result_labels; ?></span>が
         <br>
         ずかんにとうろくされました！
       </h2>

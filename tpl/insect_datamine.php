@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-
+<?php var_dump($folder); ?>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +16,12 @@
   <main>
     <section id="img-container">
       <p>
-        <img src="" alt="">
+        <img src="../model/python/tmp/<?php echo $_SESSION['file_name']; ?>" alt="判別した画像">
       </p>
     </section>
     <section id="text-container">
       <h2>
-        「<?php echo "オオムラサキ"; ?>」
+        「<?php echo $_SESSION['result'][0]['labels']; ?>」
       </h2>
       <p class="others-text">他のこうほ</p>
       <form action="" method="post">
@@ -29,35 +29,35 @@
 
           <label for="radio-1">
             <dt>
-              <input type="radio" name="radio" value="1" id="radio-1" checked>
-              <span><?php echo "オオムラサキ"; ?></span>
+              <input type="radio" name="radio" id="radio-1" value="<?php echo$_SESSION['result'][0]['index']; ?>" checked>
+              <span><?php echo $_SESSION['result'][0]['labels']; ?></span>
             </dt>
             <dd>
-              <?php echo "43"; ?>%
+              <?php echo round($_SESSION['result'][0]['results'] * 100); ?>%
             </dd>
           </label>
 
           <label for="radio-2">
             <dt>
-              <input type="radio" name="radio" id="radio-2" value="2">
-              <span><?php echo "アゲハチョウ"; ?></span>
+              <input type="radio" name="radio" id="radio-2" value="<?php echo $_SESSION['result'][1]['index']; ?>">
+              <span><?php echo $_SESSION['result'][1]['labels']; ?></span>
             </dt>
             <dd>
-              <?php echo "22"; ?>%
+              <?php echo round($_SESSION['result'][1]['results'] * 100); ?>%
             </dd>
           </label>
           <label for="radio-3">
             <dt>
-              <input type="radio" name="radio" value="3" id="radio-3">
-              <span><?php echo "カラスアゲハ"; ?></span>
+              <input type="radio" name="radio" id="radio-3" value="<?php echo $_SESSION['result'][2]['index']; ?>">
+              <span><?php echo $_SESSION['result'][2]['labels']; ?></span>
             </dt>
             <dd>
-              <?php echo "8" ?>%
+              <?php echo round($_SESSION['result'][2]['results'] * 100); ?>%
             </dd>
           </label>
         </dl>
         <div class="btn-container">
-          <button type="submit">とうろく</button>
+          <button type="submit" name="submit">とうろく</button>
         </div>
       </form>
     </section>
