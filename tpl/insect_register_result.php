@@ -31,11 +31,13 @@
       <dl>
         <div>
           <dt>みつけた種</dt>
-          <dd><?php echo "24"; ?>種</dd>
+          <dd><?php echo registered_counter($_COOKIE['user_id']); ?>種
+          </dd>
         </div>
         <div>
           <dt>のこり</dt>
-          <dd><?php echo "64"; ?>種</dd>
+          <dd><?php echo(88 - registered_counter($_COOKIE['user_id'])); ?>種
+          </dd>
         </div>
       </dl>
       <a href="./insect_list.php">
