@@ -6,7 +6,7 @@ $_COOKIE['user_id'] = 1;
 $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID, PASSWORD);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // エラー表示をする為に必要
 // $result = $db->query("SELECT * FROM `insects` WHERE insect_id = 42;");
-$stmt = $db->prepare("SELECT * FROM `insects` LEFT JOIN registers ON registers.insect_id = insects.insect_id WHERE insect_id = :id"); // ゲットで取得したidのむしを取得
+$stmt = $db->prepare("SELECT * FROM `insects` LEFT JOIN registers ON registers.insect_id = insects.insect_id WHERE insects.insect_id = :id"); // ゲットで取得したidのむしを取得
 $stmt->bindParam(':id', $insect_id, PDO::PARAM_INT);
 $insect_id = $_GET['id'];
 $stmt->execute();
