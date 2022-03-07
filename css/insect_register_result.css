@@ -40,6 +40,7 @@
 
 #text-container dl div {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -57,6 +58,7 @@
 #text-container .link-container {
   width: 100px;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
