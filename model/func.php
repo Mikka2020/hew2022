@@ -98,3 +98,20 @@ function user_rank($user_id)
     }
     return $user_rank;
 }
+
+/**
+ * 引数1:ユーザーID
+ * 処理:ユーザが合計で何種類発見しているかを返す関数
+ * $registered_cnt:発見した種の数
+ */
+function registered_counter($user_id)
+{
+    $registered_cnt = 0;
+    $check_registered_insect_array = all_insect_check($user_id);
+    foreach ($check_registered_insect_array as $row) {
+        if ($row) {
+            $registered_cnt++;
+        }
+    }
+    return $registered_cnt;
+}
