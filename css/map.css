@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("./destyle.css");
 @import url("./style.css");
 body {
@@ -66,7 +65,7 @@ body {
 }
 
 #map-container #hokkaidoProgressbar div {
-  background-image: url("./../img/icon/map/北海道ボタン中央部.svg");
+  background-image: url("./../img/icon/hokkaido.svg");
 }
 
 #map-container #tohokuProgressbar {
@@ -75,7 +74,7 @@ body {
 }
 
 #map-container #tohokuProgressbar div {
-  background-image: url("./../img/icon/map/東北ボタン中央部.svg");
+  background-image: url("./../img/icon/tohoku.svg");
 }
 
 #map-container #kantoProgressbar {
@@ -84,7 +83,7 @@ body {
 }
 
 #map-container #kantoProgressbar div {
-  background-image: url("./../img/icon/map/関東ボタン中央部.svg");
+  background-image: url("./../img/icon/kanto.svg");
 }
 
 #map-container #chubuProgressbar {
@@ -93,7 +92,7 @@ body {
 }
 
 #map-container #chubuProgressbar div {
-  background-image: url("./../img/icon/map/中部ボタン中央部.svg");
+  background-image: url("./../img/icon/chubu.svg");
 }
 
 #map-container #kinkiProgressbar {
@@ -102,7 +101,7 @@ body {
 }
 
 #map-container #kinkiProgressbar div {
-  background-image: url("./../img/icon/map/近畿ボタン中央部.svg");
+  background-image: url("./../img/icon/kinki");
 }
 
 #map-container #chugokuProgressbar {
@@ -111,7 +110,7 @@ body {
 }
 
 #map-container #chugokuProgressbar div {
-  background-image: url("./../img/icon/map/中国ボタン中央部.svg");
+  background-image: url("./../img/icon/chugoku.svg");
 }
 
 #map-container #shikokuProgressbar {
@@ -120,7 +119,7 @@ body {
 }
 
 #map-container #shikokuProgressbar div {
-  background-image: url("./../img/icon/map/四国ボタン中央部.svg");
+  background-image: url("./../img/icon/shikoku.svg");
 }
 
 #map-container #kyushuProgressbar {
@@ -129,7 +128,7 @@ body {
 }
 
 #map-container #kyushuProgressbar div {
-  background-image: url("./../img/icon/map/九州・沖縄ボタン中央部.svg");
+  background-image: url("./../img/icon/kyushu.svg");
 }
 
 #modal-container .modal-content {
