@@ -1,0 +1,52 @@
+@import url("./destyle.css");
+@import url("./style.css");
+$mushi-green: #bed636;
+$mushi-brown: #6b3404;
+$mushi-orange: #f5c421;
+#img-container {
+}
+#text-container {
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid $mushi-brown;
+  background-color: #fff;
+  width: 90vw;
+  padding: 1rem;
+  h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  dl {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    width: 50%;
+    div {
+      display: flex;
+      // padding-left: 20%;
+      dt {
+        width: 70%;
+        margin-bottom: 0.5rem;
+      }
+      dd {
+        width: 30%;
+        text-align: right;
+      }
+    }
+  }
+  .link-container {
+    // width: 100%;
+    width: 100px;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    span {
+      // display: block;
+      border: 1px solid $mushi-brown;
+      border-radius: 5px;
+      background-color: $mushi-orange;
+      padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+      -webkit-text-stroke: 1px;
+    }
+  }
+}
