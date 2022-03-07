@@ -8,13 +8,13 @@ $user_id = 1;
 $_SESSION['insect_id'] = $_POST['radio'];
 //画像の拡張子
 $ext = $_SESSION['ext'];
-//新しく作成する画像名
-$_SESSION['new_filename'] = $user_id . '_' . $_SESSION['insect_id'] . '_' . $photo_cnt . '.' . $ext;
 
 //元からある画像を取得
 $folder = glob('../users/' . $user_id . '/' .$user_id. '_' . $_SESSION['insect_id'] . '_{*.jpg,*.jpeg,*.png,*.gif,*.JPG,*.JPEG,*.PNG,*.GIF}', GLOB_BRACE);
 //元から存在する画像数
 $photo_cnt = count($folder) + 1;
+//新しく作成する画像名
+$_SESSION['new_filename'] = $user_id . '_' . $_SESSION['insect_id'] . '_' . $photo_cnt . '.' . $ext;
 
 //ユーザーIDのフォルダに格納(ユーザID_虫ID_枚数.jpg)
 copy('../model/python/tmp/' . $_SESSION['file_name'] , '../users/' .$user_id. '/'. $_SESSION['new_filename']);
