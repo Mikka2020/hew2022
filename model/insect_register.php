@@ -24,7 +24,7 @@ unlink('../model/python/tmp/' . $_SESSION['file_name']);
 // registersテーブルに投稿情報を格納する
 $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID ,PASSWORD);
 var_dump($db);
-$db->exec("INSERT INTO registers(register_id , user_id , insect_id , shooting_date , ext) VALUES ( " . $register_id . "," . $user_id . "," . $_SESSION['insect_id'] . ",NULL," . $ext . ")");
+$db->exec("INSERT INTO registers(register_id , user_id , insect_id , shooting_date , ext) VALUES ( " . $register_id . "," . $user_id . "," . $_SESSION['insect_id'] . ",NULL," . $ext . ");");
 $result = $db->query("SELECT * FROM `quests`;");
 $quest_data_table = []; // questsテーブルに格納されている全データを取得
 while($row = $result->fetch(PDO::FETCH_ASSOC)) { // データベースから1件ずつ配列を取得する
