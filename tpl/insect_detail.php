@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./../css/insect_detail.css">
   <title>詳細画面</title>
 </head>
@@ -22,8 +25,7 @@
   </header>
   <main>
     <div class="insect-img-container">
-      <img
-        class="<?php echo insect_check($_COOKIE['user_id'], $_GET['id'])? "insect-img" : "no-insect-img"; ?>"
+      <img class="<?php echo insect_check($_COOKIE['user_id'], $_GET['id'])? "insect-img" : "no-insect-img"; ?>"
         src="<?php echo insect_check($_COOKIE['user_id'], $_GET['id'])? "./../img/insects/kabutomushi.jpg" : "./../img/icon/no-data-detail.svg"; ?>"
         alt="<?php echo $insect_data['insect_name']; ?>の画像">
     </div>
