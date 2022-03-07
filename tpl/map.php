@@ -20,7 +20,9 @@
       <section class="ratio-container">
         <ul>
           <li>コンプリート率</li>
-          <li>42/88</li>
+          <li>
+            <?php echo registered_counter($_COOKIE['user_id']); ?>/88
+          </li>
         </ul>
       </section>
       <section id="hokkaidoProgressbar" class="progressbar-container">
