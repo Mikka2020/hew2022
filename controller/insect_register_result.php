@@ -3,6 +3,8 @@
 session_start();
 // 定数の読み込み
 require_once '../../config.php';
+// 関数の読込み
+require_once '../model/func.php';
 
 // セッションの値が存在しない場合
 if(!isset($_SESSION['result'])){

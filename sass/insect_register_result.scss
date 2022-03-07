@@ -4,6 +4,17 @@ $mushi-green: #bed636;
 $mushi-brown: #6b3404;
 $mushi-orange: #f5c421;
 #img-container {
+  margin-bottom: 1rem;
+  p{
+    text-align: center;
+  }
+  img {
+    object-fit: cover;
+    width: 80vw;
+    height: 50vw;
+    border: 1px solid #6b3404;
+    border-radius: 5px;
+  }
 }
 #text-container {
   margin: 0 auto;

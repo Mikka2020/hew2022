@@ -1,0 +1,112 @@
+header,
+main,
+article,
+footer {
+  width: 100%;
+}
+
+* {
+  font-family: "Yomogi", cursive;
+  font-weight: bold;
+  color: #6b3404;
+}
+
+body {
+  background-color: #fcf3b7;
+}
+
+header {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  background-color: #bed636;
+  font-size: 2rem;
+  line-height: 10vh;
+  color: #6b3404;
+  -webkit-text-stroke-width: 2px;
+  text-align: center;
+}
+
+header .back-icon {
+  position: relative;
+}
+
+header .back-icon img {
+  position: absolute;
+  left: 3vh;
+  top: 3.3vh;
+  -webkit-filter: drop-shadow(0 1px 0 #6b3404);
+          filter: drop-shadow(0 1px 0 #6b3404);
+}
+
+main {
+  height: 78vh;
+  margin-top: 10vh;
+  margin-bottom: 12vh;
+  padding-top: 2vh;
+}
+
+footer {
+  height: 12vh;
+  max-height: 80px;
+  background-color: #bed636;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100vh;
+}
+
+footer {
+  max-width: 100%;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+footer ul li {
+  width: 20%;
+  text-align: center;
+}
+
+footer ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+footer ul li a p {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+footer ul li a p:last-child {
+  margin-top: 0.5rem;
+}
+
+footer ul li a .svg-container {
+  margin-top: 1.5vh;
+  position: relative;
+  width: 100%;
+  padding-top: 45%;
+}
+
+footer ul li a .svg-container .svg-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.none {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

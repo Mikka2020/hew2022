@@ -1,0 +1,100 @@
+@import url("./destyle.css");
+@import url("./style.css");
+main .sort-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5%;
+}
+
+main .sort-tab li {
+  border: solid 2px #6b3404;
+  border-radius: 15px 15px 0 0;
+  background-color: #f5c421;
+  text-align: center;
+  width: 34vw;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  color: #fff;
+  -webkit-text-stroke-width: 0.5px;
+}
+
+main .sort-tab .active {
+  border-bottom: 0;
+  background-color: #fff;
+  color: #6b3404;
+}
+
+main #category-container {
+  background-color: #fff;
+  width: 90vw;
+  margin: 0 auto;
+  border-radius: 0 0 15px 15px;
+  border: solid 2px #6b3404;
+  border-top: 0;
+  height: 85%;
+  overflow: auto;
+}
+
+main #category-container section {
+  padding-top: 30px;
+}
+
+main #category-container section h2 {
+  background-color: #6b3404;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  border-radius: 15px;
+  width: 140px;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+}
+
+main #category-container section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main #category-container section div ul {
+  margin-bottom: 24px;
+  width: 32%;
+  text-align: center;
+}
+
+main #category-container section div:after {
+  content: "";
+  display: block;
+  width: 32%;
+  height: 0;
+}
+
+main #category-container section .insect-img-container {
+  margin-bottom: 16px;
+}
+
+main #category-container section .insect-img-container a {
+  height: 100%;
+}
+
+main #category-container section .insect-img-container a img {
+  background-color: #efefef;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=insect_list.css.map */

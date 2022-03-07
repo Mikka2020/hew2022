@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-<?php var_dump($folder); ?>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +20,7 @@
     </section>
     <section id="text-container">
       <h2>
-        「<?php echo $_SESSION['result'][0]['labels']; ?>」
+        「<?php echo insert_insect_id($_SESSION['result'][0]['index']); ?>」
       </h2>
       <p class="others-text">他のこうほ</p>
       <form action="" method="post">
@@ -30,7 +29,7 @@
           <label for="radio-1">
             <dt>
               <input type="radio" name="radio" id="radio-1" value="<?php echo$_SESSION['result'][0]['index']; ?>" checked>
-              <span><?php echo $_SESSION['result'][0]['labels']; ?></span>
+              <span><?php echo insert_insect_id($_SESSION['result'][0]['index']); ?></span>
             </dt>
             <dd>
               <?php echo round($_SESSION['result'][0]['results'] * 100); ?>%
@@ -40,7 +39,7 @@
           <label for="radio-2">
             <dt>
               <input type="radio" name="radio" id="radio-2" value="<?php echo $_SESSION['result'][1]['index']; ?>">
-              <span><?php echo $_SESSION['result'][1]['labels']; ?></span>
+              <span><?php echo insert_insect_id($_SESSION['result'][1]['index']); ?></span>
             </dt>
             <dd>
               <?php echo round($_SESSION['result'][1]['results'] * 100); ?>%
@@ -49,7 +48,7 @@
           <label for="radio-3">
             <dt>
               <input type="radio" name="radio" id="radio-3" value="<?php echo $_SESSION['result'][2]['index']; ?>">
-              <span><?php echo $_SESSION['result'][2]['labels']; ?></span>
+              <span><?php echo insert_insect_id($_SESSION['result'][2]['index']); ?></span>
             </dt>
             <dd>
               <?php echo round($_SESSION['result'][2]['results'] * 100); ?>%

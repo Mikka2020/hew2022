@@ -3,6 +3,8 @@
 session_start();
 // 定数の読み込み
 require_once '../../config.php';
+// 関数の読込み
+require_once '../model/func.php';
 
 // セッションの値が存在しない場合
 if(!isset($_SESSION['result'])){
@@ -15,4 +17,4 @@ if(isset($_POST['submit'])){
 }
 
 // tplの読み込み
-require_once '../tpl/insect_datamine.php';
+require_once '../tpl/insect_determine.php';

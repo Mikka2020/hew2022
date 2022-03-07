@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./../css/insect_register_result.css">
+  <link rel="stylesheet" href="./../sass/insect_register_result.css">
   <title>とうろく</title>
 </head>
 
@@ -15,11 +15,13 @@
   </header>
   <main>
     <section id="img-container">
-      <img src="../model/python/tmp/<?php echo $file_name; ?>" alt="">
+      <p>
+        <img src="../users/<?php echo $user_id = 1; ?>/<?php echo $file_name; ?>" alt="判別した画像">
+      </p>
     </section>
     <section id="text-container">
       <h2>
-        <span><?php echo $result_labels; ?></span>が
+        <span><?php echo insert_insect_id($result_labels); ?></span>が
         <br>
         ずかんにとうろくされました！
       </h2>

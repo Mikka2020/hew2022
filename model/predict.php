@@ -50,7 +50,7 @@ if($chk){
     $_SESSION['file_name'] = $file_name;
     //画像拡張子
     $_SESSION['ext'] = $ext;
-    header('location: ./insect_datamine.php');
+    header('location: ./insect_determine.php');
 }
 
 

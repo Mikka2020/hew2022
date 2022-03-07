@@ -1,0 +1,74 @@
+@import url("./destyle.css");
+@import url("./style.css");
+#select-container {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 80vw;
+  height: 50vw;
+  border: 1px solid #6b3404;
+  border-radius: 5px;
+  background-image: url("./../img/icon/select-photo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: #efefef;
+}
+
+#select-container label {
+  border-radius: 5px;
+  position: absolute;
+  width: 80vw;
+  height: 50vw;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#select-container label #preview {
+  border: 1px solid #6b3404;
+  border-radius: 5px;
+  width: 80vw;
+  height: 50vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#select-container input[type="file"] {
+  display: none;
+}
+
+#text-container {
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid #6b3404;
+  background-color: #fff;
+  width: 90vw;
+  padding: 1rem;
+}
+
+#text-container h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#text-container p {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+#text-container .btn-container {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#text-container .btn-container button {
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #6b3404;
+  border-radius: 5px;
+  background-color: #f5c421;
+  padding: 0.5rem;
+  -webkit-text-stroke: 1px;
+}
+/*# sourceMappingURL=insect_register.css.map */
