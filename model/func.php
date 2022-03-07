@@ -1,9 +1,7 @@
 <?php
-/**
+/**　処理：引数１で指定されたユーザーIDが登録しているどのむしをとうろくしているのかが分かる配列を返す
  * 引数１：ユーザーID
- * 処理：引数1に入っているユーザーIDがどのむしを登録しているのかを配列true,falseで返す
- * true:登録済み
- * false:未登録
+ * 返り値:配列[true -> 登録済み / false -> 未登録]
  */
 function all_insect_check($user_id)
 {
@@ -24,12 +22,10 @@ function all_insect_check($user_id)
     return $all_check;
 }
 
-/**
+/** 処理:引数１で指定されたユーザーIDが引数２で指定さむしのIDを登録しているかを返す
  * 引数1:ユーザーID
  * 引数2:むしのID
- * 処理:引数1に入ってるユーザーIDが引数2に入っているむしのIDを登録している場合はtrue,登録していない場合はfalseを返す
- * true:登録済み
- * false:未登録
+ * 返り値:true -> 登録済み / false -> 未登録
  */
 function insect_check($user_id, $insect_id)
 {
@@ -52,10 +48,9 @@ function insect_check($user_id, $insect_id)
     return $ans;
 }
 
-/**
+/**　処理:引数1で指定されたユーザーIDが獲得している経験値を計算しランクを返す
  * 引数1:ユーザーID
- * 処理:引数1で指定されたユーザーIDが獲得している経験値を計算しユーザーのランクを返す
- * $user_rank:現在のユーザーランク
+ * 返り値:指定されたユーザーのランク
  */
 function user_rank($user_id)
 {
@@ -99,6 +94,7 @@ function user_rank($user_id)
     return $user_rank;
 }
 
+
 /**
  * 引数1:ユーザーID
  * 処理:ユーザが合計で何種類発見しているかを返す関数
@@ -114,4 +110,19 @@ function registered_counter($user_id)
         }
     }
     return $registered_cnt;
+}
+
+/**処理:引数１で指定されたむしのIDに該当するむしの名前を返す
+ * 引数１：むしのID
+ * 返り値:むしの名前
+ */
+function insert_insect_id ($insect_id) {
+    $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID, PASSWORD);
+    $stmt = $db->prepare("SELECT * FROM `insects` WHERE `insect_id` = '" . $insect_id . "'");
+    $stmt->execute();
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $insect_name = $row['insect_name'];
+    }
+    $db = null;
+    return $insect_name;
 }

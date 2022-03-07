@@ -1,7 +1,7 @@
 /img
 *.DS_Store
 /users
-/model/photo_ai/tmp
+/model/python/tmp
 <<<<<<< HEAD
 model/index.php
 model/tpl_index.php

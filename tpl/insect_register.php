@@ -12,8 +12,8 @@
 
 <body>
   <header>
-   <p>とうろく</p>
-   </header>
+    <p>とうろく</p>
+  </header>
   <main>
     <form action="" method="post" enctype="multipart/form-data">
       <section id="select-container">
@@ -27,7 +27,7 @@
         <p>むしの写真をえらぶと自動でむしの名前を教えてくれます！</p>
         <p>はんていした写真をずかんにとうろくできるよ！</p>
         <div class="btn-container">
-          <button type="submit">はんてい</button>
+          <button type="submit" name="submit">はんてい</button>
         </div>
       </section>
     </form>
