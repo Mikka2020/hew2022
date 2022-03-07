@@ -64,7 +64,7 @@ value_list = [
   'kiageha',
   'kuroageha',
   'monkicyou',
-  'monsirocyou',
+  'monshirocyou',
   'yamatoshijimi',
   'yonagunisan',
   'unmontentou',
