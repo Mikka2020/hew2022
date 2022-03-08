@@ -35,7 +35,7 @@
             <?php echo "むしを３匹とうろくしてみよう"; ?>
           </p>
           <p>
-            報酬 <?php echo "2" ?>exp　期限なし
+            経験値 <?php echo "5" ?>　期限 なし
           </p>
         </div>
         <div class="quest-container">
@@ -43,7 +43,7 @@
             <?php echo "アゲハチョウを見つけてみよう！"; ?>
           </p>
           <p>
-            報酬 <?php echo "2" ?>exp　期限なし
+            経験値 <?php echo "3" ?>　期限 なし
           </p>
         </div>
         <div class="quest-container">
@@ -51,7 +51,7 @@
             <?php echo "モンシロチウョを見つけてみよう！"; ?>
           </p>
           <p>
-            報酬 <?php echo "2" ?>exp　期限なし
+            経験値 <?php echo "3" ?>　期限 なし
           </p>
         </div>
         <div class="quest-container">
@@ -59,7 +59,7 @@
             <?php echo "むしを１匹とうろくしてみよう"; ?>
           </p>
           <p>
-            報酬 <?php echo "2" ?>exp　期限なし
+            経験値 <?php echo "2" ?>　期限 なし
           </p>
         </div>
       </section>
