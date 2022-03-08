@@ -50,8 +50,8 @@
 
     <article class="quest-area">
       <ul class="sort-tab">
-        <li class="active">ウィークリー</li>
-        <li>メイン</li>
+        <li>ウィークリー</li>
+        <li class="active">メイン</li>
         <li>イベント</li>
       </ul>
       <div class="quest">
@@ -65,7 +65,7 @@
         </section>
         <section>
           <div class=""></div>
-          <p>むしを３匹とうろくしてみよう！</p>
+          <p>アゲハチョウを見つけてみよう！</p>
           <ul>
             <li>経験値 10</li>
             <li>期限 なし</li>
