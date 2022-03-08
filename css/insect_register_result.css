@@ -20,7 +20,7 @@
 #text-container {
   margin: 0 auto;
   border-radius: 5px;
-  border: 1px solid #6b3404;
+  border: 1px solid #755e3c;
   background-color: #fff;
   width: 90vw;
   padding: 1rem;
@@ -66,7 +66,7 @@
 }
 
 #text-container .link-container span {
-  border: 1px solid #6b3404;
+  border: 1px solid #755e3c;
   border-radius: 5px;
   background-color: #f5c421;
   padding: 0.5rem 0.8rem 0.5rem 0.8rem;

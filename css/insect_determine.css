@@ -13,14 +13,14 @@
      object-fit: cover;
   width: 80vw;
   height: 50vw;
-  border: 1px solid #6b3404;
+  border: 1px solid #755e3c;
   border-radius: 5px;
 }
 
 #text-container {
   margin: 0 auto;
   border-radius: 5px;
-  border: 1px solid #6b3404;
+  border: 1px solid #755e3c;
   background-color: #fff;
   width: 90vw;
   padding: 1rem;
@@ -68,7 +68,7 @@
 }
 
 #text-container dl label dt input[type="radio"]:not(:checked) + span:before {
-  border-color: #6b3404;
+  border-color: #755e3c;
 }
 
 #text-container dl label dt input[type="radio"]:checked + span:before {
@@ -92,7 +92,7 @@
 #text-container .btn-container button {
   margin: 0 auto;
   display: block;
-  border: 1px solid #6b3404;
+  border: 1px solid #755e3c;
   border-radius: 5px;
   background-color: #f5c421;
   padding: 0.5rem;

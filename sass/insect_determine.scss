@@ -1,7 +1,7 @@
 @import url("./destyle.css");
 @import url("./style.css");
 $mushi-green: #bed636;
-$mushi-brown: #6b3404;
+$mushi-brown: #755e3c;
 $mushi-orange: #f5c421;
 
 #img-container {
@@ -13,7 +13,7 @@ $mushi-orange: #f5c421;
     object-fit: cover;
     width: 80vw;
     height: 50vw;
-    border: 1px solid #6b3404;
+    border: 1px solid $mushi-brown;
     border-radius: 5px;
   }
 }

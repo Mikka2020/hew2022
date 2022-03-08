@@ -1,0 +1,78 @@
+@import url("./destyle.css");
+@import url("./style.css");
+#quests {
+  width: 90vw;
+  background-color: #755e3c;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 20px;
+}
+
+#quests h2 {
+  background-color: #fff;
+  width: 40%;
+  border: 1px solid #755e3c;
+  text-align: center;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: -0.8rem;
+  margin-bottom: 1rem;
+}
+
+#quests ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+#quests ul li {
+  background-color: #fff;
+  width: 31%;
+  text-align: center;
+  border-radius: 24px;
+  padding: 0.2rem;
+  font-size: 0.9rem;
+  color: #f5c421;
+  -webkit-text-stroke: 1px;
+}
+
+#quests ul li:nth-child(2) {
+  background-color: #f5c421;
+  color: #fff;
+}
+
+#quests .quest-container {
+  background-color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 75px;
+  margin-bottom: 1rem;
+}
+
+#quests .quest-container p:first-child {
+  padding-top: 0.5rem;
+  margin-left: 10%;
+  margin-right: 3rem;
+  margin-bottom: 1.6rem;
+  white-space: nowrap;
+}
+
+#quests .quest-container p:last-child {
+  text-align: right;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+/*# sourceMappingURL=quest.css.map */

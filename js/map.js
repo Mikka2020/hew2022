@@ -136,20 +136,21 @@ $(function () {
       $(data).each(function (i, j) {
         const prefId = j["pref_id"];
         const insectModalDomData = `
-          <a href="./insect_detail.php?id=${j["insects_insect_id"]}">
-            <ul>
-              <li><img src="./../users/${userId}/${userId}_${j["insects_insect_id"]}_1.${j["ext"]}"></li>
-              <li>${j["insect_name"]}</li>
-            </ul>
-          </a>
+          <ul>
+            <li>
+              <a href="./insect_detail.php?id=${j["insects_insect_id"]}">
+                <img src="./../users/${userId}/${userId}_${j["insects_insect_id"]}_1.${j["ext"]}">
+              </a>
+            </li>
+            <li>${j["insect_name"]}</li>
+          </ul>
           `;
         const noDataModalDomData = `
-              <a href="./insect_detail.php?id=${j["insects_insect_id"]}">
-                <ul>
-                  <li><img src="./../img/icon/no-data-icon.svg"></li>
-                  <li>${j["insect_name"]}</li>
-                </ul>
-              </a>
+          <ul>
+            <li><a href="./insect_detail.php?id=${j["insects_insect_id"]}"><img src="./../img/icon/no-data-icon.svg"></a></li>
+            <li>${j["insect_name"]}</li>
+          </ul>
+              
               `;
         if (prefId == 1) {
           hokkaidoInsectCnt++;
