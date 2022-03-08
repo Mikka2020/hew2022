@@ -3,3 +3,146 @@
 $mushi-green: #bed636;
 $mushi-brown: #755e3c;
 $mushi-orange: #f5c421;
+
+main{
+  background-image: url(../img/icon/home_background.png);
+  background-size: 100vw 78vh;
+  background-repeat: no-repeat;
+  padding: 1rem;
+}
+
+.user-area{
+  background: #fff;
+  border: solid 2px $mushi-brown;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  height: 15vh;
+}
+
+.rank{
+  width: 4rem;
+  position: relative;
+  margin-right: 0.6rem;
+  .rank-background{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: $mushi-orange;
+    border: solid 3px $mushi-brown;
+  }
+  .rank-center{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #fff;
+    border: solid 2px $mushi-brown;
+    text-align: center;
+    padding: 0.25rem;
+  }
+}
+
+.user-title{
+  font-size: 0.85rem;
+  margin-bottom: 0.1em;
+}
+.user-name{
+  margin-bottom: 0.6rem;
+}
+.rank-count{
+  font-size: 0.8rem;
+}
+
+.link-area{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  section{
+    // width: 33%;
+    text-align: center;
+  }
+  div{
+    width: 23vw;
+    height: 23vw;
+    background: #fff;
+    border: solid 2px $mushi-brown;
+    border-radius: 50%;
+    margin-bottom: 0.3rem;
+  }
+  #newsbtn{
+    background-image: url(./../img/icon/おしらせアイコン.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+  }
+  #questbtn{
+    background-image: url(./../img/icon/クエストアイコン.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  #eventbtn{
+    background-image: url(./../img/icon/イベントアイコン.png);
+    background-size: 52%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.sort-tab {
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 5%;
+  li {
+    border: solid 2px $mushi-brown;
+    border-radius: 15px 15px 0 0;
+    background-color: #f5c421;
+    text-align: center;
+    width: 34vw;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    color: #fff;
+    -webkit-text-stroke-width: 0.5px;
+    white-space: nowrap;
+  }
+  .active {
+    border-bottom: 0;
+    background-color: #fff;
+    color: $mushi-brown;
+  }
+}
+
+.quest{
+  background-color: #fff;
+  width: 90vw;
+  margin: 0 auto;
+  border-radius: 0 0 15px 15px;
+  border: solid 2px $mushi-brown;
+  border-top: 0;
+  padding: 0.6rem;
+  height: 30vh;
+  section{
+    border: solid 1.5px $mushi-brown;
+    border-radius: 4px;
+    margin-bottom: 0.6rem;
+    padding: 0.5em;
+    p{
+      margin-bottom: 1rem;
+    }
+    ul{
+      display: flex;
+      justify-content: right;
+      li{
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
