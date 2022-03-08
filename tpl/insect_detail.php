@@ -55,13 +55,13 @@
               <?php echo $insect_data['insect_moku']; ?>目
             </dd>
             <dd>
-              <?php echo $insect_data['insect_amoku']; ?>亜目
+              <?php echo $insect_data['insect_amoku']; ?><?php echo $insect_data['insect_amoku'] != "" ? "亜目" : ""; ?>
             </dd>
             <dd>
               <?php echo $insect_data['insect_ka']; ?>科
             </dd>
             <dd>
-              <?php echo $insect_data['insect_aka']; ?>亜科
+              <?php echo $insect_data['insect_aka']; ?><?php echo $insect_data['insect_aka'] != "" ? "亜科" : ""; ?>
             </dd>
           </div>
         </div>
