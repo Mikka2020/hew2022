@@ -2,13 +2,11 @@
 @import url("./style.css");
 main .sort-tab {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 90vw;
   margin: 0 auto;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 5%;
@@ -57,21 +55,18 @@ main #category-container section h2 {
   width: 140px;
   height: 1.6rem;
   line-height: 1.6rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 main #category-container section div {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main #category-container section div ul {
