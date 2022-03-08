@@ -35,11 +35,11 @@
 
     <article class="link-area">
       <section>
-        <div id="newsbtn"><a href=""></a></div>
+        <a href=""><div id="newsbtn"></div></a>
         <p>おしらせ</p>
       </section>
       <section>
-        <div id="questbtn"><a href="./quest.php"></a></div>
+        <a href="./quest.php"><div id="questbtn"></div></a>
         <p>クエスト</p>
       </section>
       <section>
