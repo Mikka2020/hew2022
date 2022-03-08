@@ -50,12 +50,15 @@ main{
 .user-title{
   font-size: 0.85rem;
   margin-bottom: 0.1em;
+  -webkit-text-stroke-width: 0.2px;
 }
 .user-name{
   margin-bottom: 0.6rem;
+  -webkit-text-stroke-width: 0.5px;
 }
 .rank-count{
   font-size: 0.8rem;
+  -webkit-text-stroke-width: 0.1px;
 }
 
 .link-area{
@@ -65,6 +68,7 @@ main{
   section{
     // width: 33%;
     text-align: center;
+    -webkit-text-stroke-width: 0.5px;
   }
   div{
     width: 23vw;
@@ -129,8 +133,8 @@ main{
   padding: 0.6rem;
   height: 30vh;
   section{
-    border: solid 1.5px $mushi-brown;
-    border-radius: 4px;
+    border: solid 1.8px $mushi-brown;
+    border-radius: 10px;
     margin-bottom: 0.6rem;
     padding: 0.5em;
     p{

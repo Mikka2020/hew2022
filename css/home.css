@@ -10,7 +10,7 @@ main {
 
 .user-area {
   background: #fff;
-  border: solid 2px #6b3404;
+  border: solid 2px #755e3c;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,7 +34,7 @@ main {
   height: 4rem;
   border-radius: 50%;
   background: #f5c421;
-  border: solid 3px #6b3404;
+  border: solid 3px #755e3c;
 }
 
 .rank .rank-center {
@@ -45,7 +45,7 @@ main {
   height: 3rem;
   border-radius: 50%;
   background: #fff;
-  border: solid 2px #6b3404;
+  border: solid 2px #755e3c;
   text-align: center;
   padding: 0.25rem;
 }
@@ -53,14 +53,17 @@ main {
 .user-title {
   font-size: 0.85rem;
   margin-bottom: 0.1em;
+  -webkit-text-stroke-width: 0.2px;
 }
 
 .user-name {
   margin-bottom: 0.6rem;
+  -webkit-text-stroke-width: 0.5px;
 }
 
 .rank-count {
   font-size: 0.8rem;
+  -webkit-text-stroke-width: 0.1px;
 }
 
 .link-area {
@@ -75,13 +78,14 @@ main {
 
 .link-area section {
   text-align: center;
+  -webkit-text-stroke-width: 0.5px;
 }
 
 .link-area div {
   width: 23vw;
   height: 23vw;
   background: #fff;
-  border: solid 2px #6b3404;
+  border: solid 2px #755e3c;
   border-radius: 50%;
   margin-bottom: 0.3rem;
 }
@@ -120,7 +124,7 @@ main {
 }
 
 .sort-tab li {
-  border: solid 2px #6b3404;
+  border: solid 2px #755e3c;
   border-radius: 15px 15px 0 0;
   background-color: #f5c421;
   text-align: center;
@@ -135,7 +139,7 @@ main {
 .sort-tab .active {
   border-bottom: 0;
   background-color: #fff;
-  color: #6b3404;
+  color: #755e3c;
 }
 
 .quest {
@@ -143,15 +147,15 @@ main {
   width: 90vw;
   margin: 0 auto;
   border-radius: 0 0 15px 15px;
-  border: solid 2px #6b3404;
+  border: solid 2px #755e3c;
   border-top: 0;
   padding: 0.6rem;
   height: 30vh;
 }
 
 .quest section {
-  border: solid 1.5px #6b3404;
-  border-radius: 4px;
+  border: solid 1.8px #755e3c;
+  border-radius: 10px;
   margin-bottom: 0.6rem;
   padding: 0.5em;
 }
