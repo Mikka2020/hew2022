@@ -48,7 +48,7 @@
         </div>
         <div class="quest-container">
           <p>
-            <?php echo "モンシロチウョを見つけてみよう！"; ?>
+            <?php echo "モンシロチョウを見つけてみよう！"; ?>
           </p>
           <p>
             経験値 <?php echo "3" ?>　期限 なし
