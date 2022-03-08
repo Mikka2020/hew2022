@@ -5,7 +5,9 @@ main {
   background-image: url(../img/icon/home_background.png);
   background-size: 100vw 78vh;
   background-repeat: no-repeat;
-  padding: 1rem;
+  padding: 0 1rem;
+  padding-top: 3vh;
+  margin-top: 10vh;
 }
 
 .user-area {
@@ -19,7 +21,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3vh;
   height: 15vh;
 }
 
@@ -73,7 +75,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 1vh;
 }
 
 .link-area section {
@@ -82,12 +84,14 @@ main {
 }
 
 .link-area div {
-  width: 23vw;
-  height: 23vw;
+  width: 13vh;
+  height: 13vh;
+  max-width: 97px;
+  max-height: 97px;
   background: #fff;
   border: solid 2px #755e3c;
   border-radius: 50%;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1vh;
 }
 
 .link-area #newsbtn {
@@ -116,11 +120,12 @@ main {
   display: -ms-flexbox;
   display: flex;
   width: 90vw;
+  height: 5vh;
   margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 5%;
+  margin-top: 2vh;
 }
 
 .sort-tab li {
@@ -158,6 +163,8 @@ main {
   border-radius: 10px;
   margin-bottom: 0.6rem;
   padding: 0.5em;
+  height: 12vh;
+  position: relative;
 }
 
 .quest section p {
@@ -171,6 +178,9 @@ main {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 1vh;
 }
 
 .quest section ul li {
