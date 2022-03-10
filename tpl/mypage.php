@@ -16,6 +16,10 @@
   <h1 class="none">むしコレ</h1>
   <header>
     <h2>マイページ</h2>
+    <form action="" method="post">
+      <button type="submit" name="btn"><img src="./../img/icon/ログアウトアイコン.png" alt="ログアウトアイコン"></button>
+      <p>ログアウト</p>
+    </form>
   </header>
 
   <main>
