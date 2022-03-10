@@ -17,8 +17,10 @@
   <header>
     <h2>マイページ</h2>
     <form action="" method="post">
-      <button type="submit" name="btn"><img src="./../img/icon/ログアウトアイコン.png" alt="ログアウトアイコン"></button>
-      <p>ログアウト</p>
+      <div>
+        <button type="submit" name="btn"><img src="./../img/icon/ログアウトアイコン.png" alt="ログアウトアイコン"></button>
+        <p>ログアウト</p>
+      </div>
     </form>
   </header>
 
@@ -27,8 +29,8 @@
       <div class="rank">
         <div class="rank-background"></div>
         <div class="rank-center">
-          <p>Rank</p>
-          <p>12</p>
+          <p class="rank-text">Rank</p>
+          <p class="user-rank">12</p>
         </div>
       </div>
       <ul>
@@ -39,27 +41,27 @@
 
     <article class="btn-area">
       <section>
-        <a href=""><div id="musikagobtn"></div></a>
+        <a href=""><div class="mypagebtn" id="musikagobtn"></div></a>
         <p>むしかご</p>
       </section>
       <section>
-        <a href=""><div id="itembtn"></div></a>
+        <a href=""><div class="mypagebtn" id="itembtn"></div></a>
         <p>もちもの</p>
       </section>
       <section>
-        <a href=""><div id="profilebtn"></div></a>
+        <a href=""><div class="mypagebtn" id="profilebtn"></div></a>
         <p>プロフィール</p>
       </section>
       <section>
-        <a href=""><div id="playbtn"></div></a>
+        <a href=""><div class="mypagebtn" id="playbtn"></div></a>
         <p>あそびかた</p>
       </section>
       <section>
-        <a href=""><div id="helpbtn"></div></a>
+        <a href=""><div class="mypagebtn" id="helpbtn"></div></a>
         <p>ヘルプ</p>
       </section>
       <section>
-        <a href=""><div id="settingbtn"></div></a>
+        <a href=""><div class="mypagebtn" id="settingbtn"></div></a>
         <p>せってい</p>
       </section>
     </article>
