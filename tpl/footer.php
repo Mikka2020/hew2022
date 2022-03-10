@@ -83,7 +83,7 @@
     </a>
   </li>
   <li>
-    <a href="#">
+    <a href="./mypage.php">
       <p class="svg-container">
         <svg class="svg-content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 25.989">
           <g id="マイページアイコン" transform="translate(0 -0.111)">

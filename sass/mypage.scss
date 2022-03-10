@@ -1,0 +1,132 @@
+@import url("./destyle.css");
+@import url("./style.css");
+$mushi-green: #bed636;
+$mushi-brown: #755e3c;
+$mushi-orange: #f5c421;
+
+header{
+  form{
+    line-height: 0;
+    position: relative;
+    div{
+      position: absolute;
+      top: -8vh;
+      right: 2vw;
+      line-height: 0;
+    }
+    img{
+      width: 30px;
+      line-height: 30px;
+    }
+    p{
+      font-size: 0.8rem;
+      -webkit-text-stroke-width: 0;
+      margin: 0;
+      padding: 0;
+      line-height: 0.8rem;
+    }
+  }
+}
+
+.user-area{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 35vh;
+  margin-bottom: 2vh;
+  ul{
+    width: 100vw;
+    text-align: center;
+    .user-title{
+      font-size: 1.2rem;
+      margin-bottom: 0.5vh;
+    }
+    .user-name{
+      font-size: 2rem;
+    }
+  }
+}
+.rank{
+  position: relative;
+  margin-bottom: 2vh;
+  .rank-background{
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: $mushi-orange;
+    border: solid 3px $mushi-brown;
+  }
+  .rank-center{
+    position: absolute;
+    top: 3vw;
+    left: 3vw;
+    width: 34vw;
+    height: 34vw;
+    border-radius: 50%;
+    background: #fff;
+    border: solid 2px $mushi-brown;
+    text-align: center;
+    padding: 1.2rem;
+  }
+  .rank-text{
+    font-size: 1.8rem;
+  }
+  .user-rank{
+    font-size: 2.5rem;
+  }
+}
+
+
+
+.btn-area{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 1vh;
+  section{
+    width: 30vw;
+    text-align: center;
+    -webkit-text-stroke-width: 0.5px;
+    margin-bottom: 2vh;
+  }
+  div{
+    margin: 0 auto;
+    width: 13vh;
+    height: 13vh;
+    max-width: 97px;
+    max-height: 97px;
+    background: #fff;
+    border: solid 2px $mushi-brown;
+    border-radius: 50%;
+    margin-bottom: 1vh;
+  }
+  .mypagebtn{
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;  
+  }
+  #musikagobtn{
+    background-image: url(./../img/icon/むしかごアイコン.png);
+  }
+  #itembtn{
+    background-image: url(./../img/icon/もちものアイコン.png);
+  }
+  #profilebtn{
+    background-image: url(./../img/icon/プロフィールアイコン.png);
+    background-size: 45%;
+  }
+  #playbtn{
+    background-image: url(./../img/icon/あそびかたアイコン.png);
+    background-size: 45%;
+  }
+  #helpbtn{
+    background-image: url(./../img/icon/ヘルプアイコン.png);
+    background-position: 55% 35%;
+  }
+  #settingbtn{
+    background-image: url(./../img/icon/せっていアイコン.png);
+    background-position: 52% 50%;
+  }
+}
