@@ -105,7 +105,6 @@ main{
 .sort-tab {
   display: flex;
   width: 90vw;
-  height: 5vh;
   margin: 0 auto;
   justify-content: space-between;
   margin-top: 2vh;
@@ -128,7 +127,7 @@ main{
   }
 }
 //65
-.quest{
+#quest-1, #quest-2, #quest-3{
   background-color: #fff;
   width: 90vw;
   margin: 0 auto;
@@ -141,8 +140,8 @@ main{
     border: solid 1.8px $mushi-brown;
     border-radius: 10px;
     margin-bottom: 0.6rem;
-    padding: 0.5em;
-    height: 12vh;
+    padding: 0.7rem;
+    height: 10vh;
     position: relative;
     p{
       margin-bottom: 1rem;
@@ -159,4 +158,8 @@ main{
       }
     }
   }
+}
+
+.inactive-content {
+  display: none;
 }

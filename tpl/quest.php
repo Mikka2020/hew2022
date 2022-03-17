@@ -25,49 +25,97 @@
     <div id="quests">
       <h2>クエスト</h2>
       <ul>
-        <li>ウィークリー</li>
-        <li>メイン</li>
-        <li>イベント</li>
+        <li id="tab-1">ウィークリー</li>
+        <li id="tab-2" class="active">メイン</li>
+        <li id="tab-3">イベント</li>
       </ul>
-      <section>
-        <div class="quest-container">
-          <p>
-            <?php echo "むしを３匹とうろくしてみよう"; ?>
-          </p>
-          <p>
-            経験値 <?php echo "5" ?>　期限 なし
-          </p>
-        </div>
-        <div class="quest-container">
-          <p>
-            <?php echo "アゲハチョウを見つけてみよう！"; ?>
-          </p>
-          <p>
-            経験値 <?php echo "3" ?>　期限 なし
-          </p>
-        </div>
-        <div class="quest-container">
-          <p>
-            <?php echo "モンシロチョウを見つけてみよう！"; ?>
-          </p>
-          <p>
-            経験値 <?php echo "3" ?>　期限 なし
-          </p>
-        </div>
-        <div class="quest-container">
-          <p>
-            <?php echo "むしを１匹とうろくしてみよう"; ?>
-          </p>
-          <p>
-            経験値 <?php echo "2" ?>　期限 なし
-          </p>
-        </div>
-      </section>
+
+      <div id="weekly-quest" class="inactive-content">
+        <section>
+          <div class="quest-container">
+            <p>
+              <?php echo "むしを１０匹とうろくしてみよう"; ?>
+            </p>
+            <p>
+              経験値 <?php echo "10" ?>　期限 なし
+            </p>
+          </div>
+          <div class="quest-container">
+            <p>
+              <?php echo "ヤマトシジミを見つけてみよう！"; ?>
+            </p>
+            <p>
+              経験値 <?php echo "10" ?>　期限 なし
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div id="main-quest">
+        <section>
+          <div class="quest-container">
+            <p>
+              <?php echo "むしを３匹とうろくしてみよう"; ?>
+            </p>
+            <p>
+              経験値 <?php echo "5" ?>　期限 なし
+            </p>
+          </div>
+          <div class="quest-container">
+            <p>
+              <?php echo "アゲハチョウを見つけてみよう！"; ?>
+            </p>
+            <p>
+              経験値 <?php echo "3" ?>　期限 なし
+            </p>
+          </div>
+          <div class="quest-container">
+            <p>
+              <?php echo "モンシロチョウを見つけてみよう！"; ?>
+            </p>
+            <p>
+              経験値 <?php echo "3" ?>　期限 なし
+            </p>
+          </div>
+          <div class="quest-container">
+            <p>
+              <?php echo "むしを１匹とうろくしてみよう"; ?>
+            </p>
+            <p>
+              経験値 <?php echo "2" ?>　期限 なし
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div id="event-quest" class="inactive-content">
+        <section>
+          <div class="quest-container">
+            <p>
+              <?php echo "アリを３匹とうろくしてみよう"; ?>
+            </p>
+            <p>
+              経験値 <?php echo "10" ?>　期限 あと５日
+            </p>
+          </div>
+          <div class="quest-container">
+            <p>
+              <?php echo "セミを１匹見つけてみよう！"; ?>
+            </p>
+            <p>
+              経験値 <?php echo "10" ?>　期限 あと５日
+            </p>
+          </div>
+        </section>
+      </div>
+
+      
     </div>
   </main>
   <footer>
     <?php require_once './footer.php'; ?>
   </footer>
+  <script src="./../js/quest.js"></script>
 </body>
 
 </html>
