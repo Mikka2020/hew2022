@@ -105,7 +105,6 @@ main{
 .sort-tab {
   display: flex;
   width: 90vw;
-  height: 5vh;
   margin: 0 auto;
   justify-content: space-between;
   margin-top: 2vh;
@@ -141,8 +140,8 @@ main{
     border: solid 1.8px $mushi-brown;
     border-radius: 10px;
     margin-bottom: 0.6rem;
-    padding: 0.5em;
-    height: 12vh;
+    padding: 0.7rem;
+    height: 10vh;
     position: relative;
     p{
       margin-bottom: 1rem;
