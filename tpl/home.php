@@ -99,7 +99,7 @@
           <p>アリを３匹とうろくしてみよう！</p>
           <ul>
             <li>経験値 10</li>
-            <li>期限 なし</li>
+            <li>期限 あと５日</li>
           </ul>
         </section>
         <section>
@@ -107,13 +107,12 @@
           <p>セミを１匹見つけてみよう！</p>
           <ul>
             <li>経験値 10</li>
-            <li>期限 なし</li>
+            <li>期限 あと５日</li>
           </ul>
         </section>
       </div>
     </article>
   </main>
-
   <footer>
     <?php require_once './footer.php'; ?>
   </footer>
