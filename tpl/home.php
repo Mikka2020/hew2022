@@ -35,7 +35,7 @@
 
     <article class="link-area">
       <section>
-        <a href=""><div id="newsbtn"></div></a>
+        <a href="./info.php"><div id="newsbtn"></div></a>
         <p>おしらせ</p>
       </section>
       <section>
@@ -50,14 +50,15 @@
 
     <article class="quest-area">
       <ul class="sort-tab">
-        <li>ウィークリー</li>
-        <li class="active">メイン</li>
-        <li>イベント</li>
+        <li id="tab-1">ウィークリー</li>
+        <li id="tab-2" class="active">メイン</li>
+        <li id="tab-3">イベント</li>
       </ul>
-      <div class="quest">
+
+      <div id="quest-1" class="inactive-content">
         <section>
           <div class=""></div>
-          <p>むしを３匹とうろくしてみよう！</p>
+          <p>むしを１０匹とうろくしてみよう！</p>
           <ul>
             <li>経験値 10</li>
             <li>期限 なし</li>
@@ -65,7 +66,45 @@
         </section>
         <section>
           <div class=""></div>
+          <p>ヤマトシジミを見つけてみよう！</p>
+          <ul>
+            <li>経験値 10</li>
+            <li>期限 なし</li>
+          </ul>
+        </section>
+      </div>
+
+      <div id="quest-2">
+        <section>
+          <div class=""></div>
+          <p>むしを３匹とうろくしてみよう！</p>
+          <ul>
+            <li>経験値 3</li>
+            <li>期限 なし</li>
+          </ul>
+        </section>
+        <section>
+          <div class=""></div>
           <p>アゲハチョウを見つけてみよう！</p>
+          <ul>
+            <li>経験値 5</li>
+            <li>期限 なし</li>
+          </ul>
+        </section>
+      </div>
+
+      <div id="quest-3" class="inactive-content">
+        <section>
+          <div class=""></div>
+          <p>アリを３匹とうろくしてみよう！</p>
+          <ul>
+            <li>経験値 10</li>
+            <li>期限 なし</li>
+          </ul>
+        </section>
+        <section>
+          <div class=""></div>
+          <p>セミを１匹見つけてみよう！</p>
           <ul>
             <li>経験値 10</li>
             <li>期限 なし</li>
@@ -78,6 +117,7 @@
   <footer>
     <?php require_once './footer.php'; ?>
   </footer>
+  <script src="./../js/home.js"></script>
 </body>
 
 </html>

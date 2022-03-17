@@ -147,7 +147,7 @@ main {
   color: #755e3c;
 }
 
-.quest {
+#quest-1, #quest-2, #quest-3 {
   background-color: #fff;
   width: 90vw;
   margin: 0 auto;
@@ -158,7 +158,7 @@ main {
   height: 30vh;
 }
 
-.quest section {
+#quest-1 section, #quest-2 section, #quest-3 section {
   border: solid 1.8px #755e3c;
   border-radius: 10px;
   margin-bottom: 0.6rem;
@@ -167,11 +167,11 @@ main {
   position: relative;
 }
 
-.quest section p {
+#quest-1 section p, #quest-2 section p, #quest-3 section p {
   margin-bottom: 1rem;
 }
 
-.quest section ul {
+#quest-1 section ul, #quest-2 section ul, #quest-3 section ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,8 +183,12 @@ main {
   bottom: 1vh;
 }
 
-.quest section ul li {
+#quest-1 section ul li, #quest-2 section ul li, #quest-3 section ul li {
   margin-left: 1rem;
   font-size: 0.9rem;
+}
+
+.inactive-content {
+  display: none;
 }
 /*# sourceMappingURL=home.css.map */
