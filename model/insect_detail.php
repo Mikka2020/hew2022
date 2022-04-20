@@ -23,7 +23,7 @@ $rea = 3 - $insect_data['rarity'];
 function insect_register_cnt($user_id, $insect_id)
 {
     $db = new PDO('mysql:dbname=' . DB_NAME . ';host=' . HOST . ';charset=utf8', USER_ID, PASSWORD);
-    $stmt = $db->prepare("SELECT COUNT(*) FROM registers WHERE user_id = $user_id AND insect_id = $insect_id");
+    $stmt = $db->prepare("SELECT COUNT(*) FROM registers WHERE user_id = :user_id AND insect_id = :insect_id");
     $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
     $stmt->bindParam(':insect_id', $insect_id, PDO::PARAM_INT);
     $stmt->execute();
