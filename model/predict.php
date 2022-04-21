@@ -26,7 +26,8 @@ if($chk){
     $ext = strtolower(pathinfo($_FILES['insect_img']['name'] , PATHINFO_EXTENSION));
     $file_name = $user_id . '_' . date('YmdHis') . '.' . $ext;
     move_uploaded_file($_FILES['insect_img']['tmp_name'] , '../model/python/tmp/' . $file_name);
-    $exif = @exif_read_data($_FILES['upfile']['tmp_name']);
+    // $exif = @exif_read_data($_FILES['upfile']['tmp_name']);
+
     //api server
     $url = "http://localhost:8081/predict?name=" . $file_name;
 
