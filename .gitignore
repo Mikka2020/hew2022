@@ -2,9 +2,9 @@
 *.DS_Store
 /users
 /model/python/tmp
-<<<<<<< HEAD
+/model/python/__pycache__
+/model/python/model
 model/index.php
 model/tpl_index.php
-=======
 test.*
->>>>>>> 3675b102e9786fc7041f0b5e89cd04acddd17c34
+
