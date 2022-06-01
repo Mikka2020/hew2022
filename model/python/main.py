@@ -94,10 +94,7 @@ value_list = [
   'misujimaimai',
   'okadangomushi',
   'funamushi'
-]
-
-# if __name__ == "__main__":
-#   uvicorn.run(app, port=8080, host='127.0.0.1') 
+] 
 
 @app.get('/index')
 def hello_world(name: str):
@@ -156,7 +153,7 @@ async def file_name(name: str):
       dims_expander = tf.expand_dims(float_caster, 0)
       resized = tf.image.resize_bilinear(dims_expander, [input_height, input_width])
       normalized = tf.divide(tf.subtract(resized, [input_mean]), [input_std])
-      sess = tf.compat.v1.Session()
+      sess = tf.Session()
       return sess.run(normalized)
 
 
@@ -225,7 +222,7 @@ async def file_name(name: str):
     input_operation = graph.get_operation_by_name(input_name)
     output_operation = graph.get_operation_by_name(output_name)
 
-    with tf.compat.v1.Session(graph=graph) as sess:
+    with tf.Session(graph=graph) as sess:
       results = sess.run(output_operation.outputs[0], {
           input_operation.outputs[0]: t
       })
